@@ -1,5 +1,18 @@
 <?php
     session_start();
+    $link = mysqli_connect(
+        'localhost', // mysql 主機名稱
+        'root', // 使用者名稱
+        '', // 密碼
+        'ram' // 預設使用的資料庫名稱
+    );
+
+    if (!$link) {
+        echo "MySQL 連線錯誤<br>";
+        exit();
+    } else {
+        echo "MySQL ram 資料庫連接成功<br>";
+    }
 
     // 登入系統完成後再取消 comment
     // if (isset($_SESSION['uid'])){
@@ -17,8 +30,10 @@
 </head>
 <body>
     <h1>Log in</h1>
-    帳號 <input type="text" name="account">
-    密碼 <input type="password" name="password">
-    <button type="submit" class="btn btn-dark btn-lg">登入</button>
+    <form action="auth.php" method="POST">
+        帳號 <input type="text" name="account">
+        密碼 <input type="password" name="password">
+        <button type="submit" class="btn btn-dark btn-lg">登入</button>
+    </form>
 </body>
 </html>
