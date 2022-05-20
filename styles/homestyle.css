@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     padding: 0;
@@ -9,6 +11,11 @@ body{
     display: flex;
     background-color: black;
     color: aliceblue;
+    justify-content: space-between;
+}
+
+.bleft{
+    display: flex;
 }
 
 #banner img{

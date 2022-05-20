@@ -1,11 +1,14 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="styles/homestyle.css">
+    <link rel="stylesheet" href="styles/common.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +16,44 @@
 
     <title>租隊友</title>
 </head>
+
 <body>
-    <section id="banner">
-        <div class="banner-wrapper">
-            <img src="https://picsum.photos/300/200" alt="placeholder">
-            <h1 class="banner-title">&nbsp租隊友</h1>
+<section id="header">
+        <div class="flex-wrap">
+            <div class="fleft">
+                <img src="https://picsum.photos/100" alt="">
+                <span>Rent-A-Mate</span>
+            </div>
+            <div class="fright">
+                <div class="listing">
+                    <img src="https://picsum.photos/100" alt="">
+                    <span>刊登物件</span>
+                </div>
+                <div class="user">
+                    <span>#使用者名稱</span>
+                    <img src="https://picsum.photos/100" alt="">
+                </div>
+            </div>
         </div>
     </section>
+    <!-- <section id="banner">
+        <div class="banner-wrapper">
+            <div class="bleft">
+                <img src="https://picsum.photos/300/200" alt="placeholder">
+                <h1 class="banner-title">&nbsp租隊友</h1>
+            </div>
+            <div class="bright">
+                <div class="listing">
+                    <img src="https://picsum.photos/100" alt="">
+                    <span>刊登物件</span>
+                </div>
+                <div class="user">
+                    <span>#使用者名稱</span>
+                    <img src="https://picsum.photos/100" alt="">
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <section id="landing-zone">
         <div class="landing-wrapper">
@@ -32,5 +66,13 @@
             </div>
         </div>
     </section>
+
+    <?php
+
+
+
+    ?>
+
 </body>
+
 </html>

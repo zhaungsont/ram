@@ -1,0 +1,19 @@
+.flex-wrap{
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+    justify-content: space-between;
+}
+
+.flex-wrap img{
+    display: inline;
+    vertical-align: middle; 
+}
+
+.fright{
+    display: flex;
+}
+
+.listing{
+    margin-right: 2em;
+}
