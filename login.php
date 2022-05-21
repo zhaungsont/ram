@@ -1,23 +1,12 @@
 <?php
     session_start();
-    $link = mysqli_connect(
-        'localhost', // mysql 主機名稱
-        'root', // 使用者名稱
-        '', // 密碼
-        'ram' // 預設使用的資料庫名稱
-    );
 
-    if (!$link) {
-        echo "MySQL 連線錯誤<br>";
+    // 檢查使用者是否早就登入過了，如果是就重新導向到 /browse
+    if (isset($_SESSION['uid'])){
+        header("Location: browse.php");
         exit();
-    } else {
-        echo "MySQL ram 資料庫連接成功<br>";
     }
 
-    // 登入系統完成後再取消 comment
-    // if (isset($_SESSION['uid'])){
-    //     header('Location: home.php');
-    // }
 ?>
 
 <!DOCTYPE html>

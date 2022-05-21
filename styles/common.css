@@ -17,3 +17,8 @@
 .listing{
     margin-right: 2em;
 }
+
+.logout{
+    display: flex;
+    align-items: center;
+}

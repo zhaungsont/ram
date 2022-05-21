@@ -17,7 +17,6 @@
         exit();
     } else {
         echo "MySQL ram 資料庫連接成功<br>";
-        // $sql = "SELECT * FROM user;";
         $sql = "SELECT *  FROM user WHERE account = '$inputAccount' AND password = '$inputPassword';";
         $result = mysqli_query($link, $sql);
         $resultCheck = mysqli_num_rows($result);
@@ -29,8 +28,11 @@
                 echo $row['name']."<br>";
                 echo $row['account']."<br>";
                 echo $row['pw']."<br>";
+
+                $_SESSION['uid'] = $row['uid'];
+                echo "session uid 現在是 ".$_SESSION['uid'];
             }
-            echo "<br>";
+            
 
         } else {
             // 資料庫內沒有查到這個帳號

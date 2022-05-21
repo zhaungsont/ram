@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    // 因為現在懶得一直做登入
-    $_SESSION['uid'] = 'gg';
-    $_POST['hchoice'] = '124';
+    // 懶得一直做登入的話就把這個放出來
+    // $_SESSION['uid'] = 'gg';
+    // $_POST['hchoice'] = '124';
 
     if (isset($_SESSION['uid']) && (isset($_POST['hchoice']))){
         $user = $_SESSION['uid'];
