@@ -22,6 +22,10 @@ body{
     width: 100px;
 }
 
+#landing-zone{
+
+}
+
 #landing-zone h1{
     font-size: 3em;
 }
@@ -31,6 +35,7 @@ body{
     width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .lw-left{
@@ -43,4 +48,6 @@ body{
 
 .lw-right img{
     max-width: 100%;
+    display: block;
+    margin: auto;
 }

@@ -88,10 +88,11 @@
         </div>
     </section>
 
-    <section id="browse-section">
+<section id="browse-section">
 
-        <div class="bwrap">
-    <?php
+    <div class="container">
+        <div class="row row-cols-4">
+        <?php
         // 載入所有房型
         $houseTable = "SELECT *  FROM house WHERE havailability = '1';";
 
@@ -108,18 +109,18 @@
                 $havailability = $row['havailability'];
 
                 // 把介紹文縮短一點，使用的語法是 ternary operator
-                $truncDesc = (strlen($hdesc) > 60) ? substr($hdesc,0,57).'...' : $hdesc;
+                $truncDesc = (strlen($hdesc) > 40) ? substr($hdesc,0,37).'...' : $hdesc;
                 // if ($havailability == '1'){
                 ?>
+                    <div class="col d-flex align-items-stretch">
                     <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $hname ?></h5>
                         <p class="card-text"><?php echo $truncDesc ?></p>
-                        <h2>$<?php echo $hprice ?> / 每晚</h2>
-                        <!-- <a href="#" class="btn btn-primary">立馬訂購</a> -->
-
+                        
                         <form action="checkout.php" method="POST">
+                            <h2>$<?php echo $hprice ?> / 每晚</h2>
                             <input type="hidden" name="hid" value=<?php echo $hid ?>>
                             <input type="hidden" name="hname" value=<?php echo $hname ?>>
                             <input type="hidden" name="hdesc" value=<?php echo $hdesc ?>>
@@ -127,6 +128,7 @@
 
                             <input type="submit" class="btn btn-primary" value="立馬訂購">
                         </form>
+                    </div>
                     </div>
                     </div>
                 <?php
@@ -138,8 +140,9 @@
             // 都沒房子ㄌ，尷尬
             echo "沒⋯⋯房⋯⋯可⋯⋯看⋯⋯";
         }
-    ?>
-</div>
+        ?>
+        </div>
+    </div>
 </section>
     
 </body>

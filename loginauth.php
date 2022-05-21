@@ -31,6 +31,7 @@
 
                 $_SESSION['uid'] = $row['uid'];
                 echo "session uid 現在是 ".$_SESSION['uid'];
+                header( "refresh:2;url=browse.php" );
             }
             
 
