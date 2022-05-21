@@ -79,7 +79,7 @@
                 } else {
                 ?>
                 <div>
-                    <a href="login.php">登入</a>
+                    <a href="login.php" class="btn btn-dark btn-lg">登入</a>
                 </div>
                 <?php
                 }
@@ -93,6 +93,7 @@
             <div class="lw-left">
                 <h1>租屋進行式</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni praesentium ullam a. Nesciunt, at necessitatibus adipisci molestias impedit quas debitis culpa? Adipisci sunt facilis magnam veritatis vero maxime magni harum.</p>
+                <a href="browse.php" class="btn btn-dark btn-lg">立即看房</a>
             </div>
             <div class="lw-right">
                 <img src="https://picsum.photos/600/800" alt="">

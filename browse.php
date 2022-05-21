@@ -27,6 +27,7 @@
             } 
             
         }
+
     }
 ?>
 
@@ -36,6 +37,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/browsestyle.css">
     <!-- 共用CSS -->
     <link rel="stylesheet" href="styles/common.css">
     <!-- BOOTSTRAP -->
@@ -77,7 +79,7 @@
                 } else {
                 ?>
                 <div>
-                    <a href="login.php">登入</a>
+                    <a href="login.php" class="btn btn-dark btn-lg">登入</a>
                 </div>
                 <?php
                 }
@@ -86,9 +88,59 @@
         </div>
     </section>
 
-    <form action="checkout.php" method="POST">
-        <input type="hidden" name="hchoice" value='123'>
-        <input type="submit" name="" id="">
-    </form>
+    <section id="browse-section">
+
+        <div class="bwrap">
+    <?php
+        // 載入所有房型
+        $houseTable = "SELECT *  FROM house WHERE havailability = '1';";
+
+        $result = mysqli_query($link, $houseTable);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0){
+            // 資料庫內有這個帳號
+            while ($row = mysqli_fetch_assoc($result)){
+
+                $hid = $row['hid'];
+                $hname = $row['hname'];
+                $hdesc =  $row['hdesc'];
+                $hprice = $row['hprice'];
+                $havailability = $row['havailability'];
+
+                // 把介紹文縮短一點，使用的語法是 ternary operator
+                $truncDesc = (strlen($hdesc) > 60) ? substr($hdesc,0,57).'...' : $hdesc;
+                // if ($havailability == '1'){
+                ?>
+                    <div class="card" style="width: 18rem;">
+                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $hname ?></h5>
+                        <p class="card-text"><?php echo $truncDesc ?></p>
+                        <h2>$<?php echo $hprice ?> / 每晚</h2>
+                        <!-- <a href="#" class="btn btn-primary">立馬訂購</a> -->
+
+                        <form action="checkout.php" method="POST">
+                            <input type="hidden" name="hid" value=<?php echo $hid ?>>
+                            <input type="hidden" name="hname" value=<?php echo $hname ?>>
+                            <input type="hidden" name="hdesc" value=<?php echo $hdesc ?>>
+                            <input type="hidden" name="hprice" value=<?php echo $hprice ?>>
+
+                            <input type="submit" class="btn btn-primary" value="立馬訂購">
+                        </form>
+                    </div>
+                    </div>
+                <?php
+                // }
+            }
+            
+
+        } else {
+            // 都沒房子ㄌ，尷尬
+            echo "沒⋯⋯房⋯⋯可⋯⋯看⋯⋯";
+        }
+    ?>
+</div>
+</section>
+    
 </body>
 </html>

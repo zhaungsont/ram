@@ -5,12 +5,57 @@
     // $_SESSION['uid'] = 'gg';
     // $_POST['hchoice'] = '124';
 
-    if (isset($_SESSION['uid']) && (isset($_POST['hchoice']))){
+    if (isset($_SESSION['uid']) && (isset($_POST['hid']))){
         $user = $_SESSION['uid'];
-        $house = $_POST['hchoice'];
     } else {
         // 沒有登入或沒有點選下單就到此頁面
         header('Location: login.php');
+    }
+
+    // 連線 MySQL
+    $link = mysqli_connect(
+        'localhost', // mysql 主機名稱
+        'root', // 使用者名稱
+        '', // 密碼
+        'ram' // 預設使用的資料庫名稱
+    );
+
+    if (!$link) {
+        echo "MySQL 連線錯誤<br>";
+        exit();
+    } else {
+        // 有登入才給 username ，沒登入沒關係，就省略
+        if (isset($_SESSION['uid'])){
+            $uid = $_SESSION['uid'];
+            $sql = "SELECT *  FROM user WHERE uid = '$uid';";
+            $result = mysqli_query($link, $sql);
+            $resultCheck = mysqli_num_rows($result);
+
+            if ($resultCheck > 0){
+                // 資料庫內有這個帳號
+                while ($row = mysqli_fetch_assoc($result)){
+                    $username =  $row['username'];
+                }
+            } 
+            
+        }
+
+        // 載入使用者欲下單的房型（沒辦法直接用表單傳，PHP POST 有資料乘載上限）
+        $hid = $_POST['hid'];
+        $houseTable = "SELECT * FROM house WHERE hid = '$hid';";
+        $result = mysqli_query($link, $houseTable);
+        $resultCheck = mysqli_num_rows($result);
+
+        if ($resultCheck > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                $hname = $row['hname'];
+                $hdesc =  $row['hdesc'];
+                $hprice = $row['hprice'];
+                $havailability = $row['havailability'];
+            }
+        } else {
+            echo "錯誤";
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -43,7 +88,7 @@
                     <span>刊登物件</span>
                 </div>
                 <div class="user">
-                    <span>#使用者名稱</span>
+                    <span><?php echo $username ?></span>
                     <img src="https://picsum.photos/100" alt="">
                 </div>
             </div>
@@ -51,16 +96,18 @@
     </section>
     <section id="checkout-section">
         <div class="decoration">
-            <img src="https://picsum.photos/400/300">
+            <img src="https://picsum.photos/400/200">
             <div class="form">
-                <h1>#使用者，這是您的訂單</h1>
-                <h2>#屋件名稱</h2>
-                <p>#屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介屋件簡介</p>
+                <h1><?php echo $username ?>，這是您的訂單</h1>
+                <h2><?php echo $hname ?></h2>
+                <p><?php echo $hdesc ?></p>
+
                 <form action="success.php" method="POST">
                     <span>入住長度：</span>
                     <input required type="text" name="nights">    
-                    <span>x $#價錢</span>
-                    <input type="hidden" name="checkouthouse" value=<?php echo $house ?>>
+                    <span>x $<?php echo $hprice ?></span>
+                    <input type="hidden" name="hid" value=<?php echo $hid ?>>
+                    <input type="hidden" name="hname" value=<?php echo $hname ?>>
                     <br><br>
                     <div class="buttonflex">
                         <button type="submit" class="btn btn-dark btn-lg">訂房</button>

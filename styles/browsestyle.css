@@ -1,0 +1,12 @@
+#browse-section{
+    margin: 3em 20%;
+}
+
+.bwrap{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    margin: 1em;
+}
