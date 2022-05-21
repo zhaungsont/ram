@@ -36,6 +36,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/homestyle.css">
+    <!-- 共用CSS -->
     <link rel="stylesheet" href="styles/common.css">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -86,24 +87,6 @@
             </div>
         </div>
     </section>
-    <!-- <section id="banner">
-        <div class="banner-wrapper">
-            <div class="bleft">
-                <img src="https://picsum.photos/300/200" alt="placeholder">
-                <h1 class="banner-title">&nbsp租隊友</h1>
-            </div>
-            <div class="bright">
-                <div class="listing">
-                    <img src="https://picsum.photos/100" alt="">
-                    <span>刊登物件</span>
-                </div>
-                <div class="user">
-                    <span>#使用者名稱</span>
-                    <img src="https://picsum.photos/100" alt="">
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section id="landing-zone">
         <div class="landing-wrapper">
