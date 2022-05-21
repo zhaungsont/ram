@@ -29,6 +29,7 @@
     <?php 
      echo $_SESSION['uid']; ?>
     <form action="registerauth.php" method="POST">
+        姓名 <input type="text" name="username">
         帳號 <input type="text" name="account">
         密碼 <input type="password" name="password">
         <button type="submit" class="btn btn-dark btn-lg">註冊</button>

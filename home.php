@@ -22,7 +22,7 @@
             if ($resultCheck > 0){
                 // 資料庫內有這個帳號
                 while ($row = mysqli_fetch_assoc($result)){
-                    $username =  $row['name'];
+                    $username =  $row['username'];
                 }
             } 
             

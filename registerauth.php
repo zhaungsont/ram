@@ -3,6 +3,7 @@
 
     $inputAccount = $_POST['account'];
     $inputPassword = $_POST['password'];
+    $inputUsername = $_POST['username'];
 
     echo "預註冊帳號密碼: $inputAccount, $inputPassword <br>";
     $link = mysqli_connect(
@@ -30,12 +31,16 @@
             header( "refresh:0;url=register.php" );
 
         } else {
-            while ($row = mysqli_fetch_assoc($result)){
-                echo $row['uid']."<br>";
-                echo $row['name']."<br>";
-                echo $row['account']."<br>";
-                echo $row['pw']."<br>";
-            }
+            // 將這筆資料存進 MySQL
+            $registration = "INSERT INTO user(account, password, username)
+            VALUES ('$inputAccount', '$inputPassword', '$inputUsername')";
+            mysqli_query($link, $registration);
+            $last_id = $link->insert_id;
+            $_SESSION['uid'] = $last_id;
+            echo "last id is $last_id <br>";
+            echo "<h1>註冊成功！重新導向到首頁⋯⋯</h1>";
+
+            header( "refresh:3;url=home.php" );
         }
     }
 ?>

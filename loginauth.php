@@ -25,7 +25,7 @@
             // 資料庫內有這個帳號
             while ($row = mysqli_fetch_assoc($result)){
                 echo $row['uid']."<br>";
-                echo $row['name']."<br>";
+                echo $row['username']."<br>";
                 echo $row['account']."<br>";
                 echo $row['pw']."<br>";
 
