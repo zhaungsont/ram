@@ -32,9 +32,15 @@
         $hname = $_POST['hname'];
         $updateSql = "UPDATE house SET havailability = '0' WHERE house.hid = '$hid';";
         mysqli_query($link, $updateSql);
+
+        // 釋放結果物件佔用的記憶體空間
+        mysqli_free_result($result); 
+        // 斷開SQL連接
+        mysqli_close($link);
+
         echo "<h1>感謝您在租隊友訂房！</h1>";
         echo "<h3>祝您在 $hname 有美好的體驗！</h2>";
-        header( "refresh:3;url=home.php" );
+        header( "refresh:2;url=home.php" );
     }
 ?>
 
@@ -44,6 +50,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 共用CSS -->
+    <link rel="stylesheet" href="styles/common.css">
     <title>Success</title>
 </head>
 <body>

@@ -15,6 +15,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 共用CSS -->
+    <link rel="stylesheet" href="styles/common.css">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- GOOGLE FONTS -->
@@ -24,6 +26,8 @@
     <title>Document</title>
 </head>
 <body>
+<?php require('require/header.php'); ?>
+
     <h1>Log in</h1>
     <form action="loginauth.php" method="POST">
         帳號 <input type="text" name="account">

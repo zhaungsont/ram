@@ -76,24 +76,8 @@
     <title>Checkout</title>
 </head>
 <body>
-    <section id="header">
-        <div class="flex-wrap">
-            <div class="fleft">
-                <img src="https://picsum.photos/100" alt="">
-                <span>Rent-A-Mate</span>
-            </div>
-            <div class="fright">
-                <div class="listing">
-                    <img src="https://picsum.photos/100" alt="">
-                    <span>刊登物件</span>
-                </div>
-                <div class="user">
-                    <span><?php echo $username ?></span>
-                    <img src="https://picsum.photos/100" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+<?php require('require/header.php'); ?>
+
     <section id="checkout-section">
         <div class="decoration">
             <img src="https://picsum.photos/400/200">

@@ -26,12 +26,14 @@
     <title>註冊</title>
 </head>
 <body>
-    <?php 
-     echo $_SESSION['uid']; ?>
+<?php require('require/header.php'); ?>
+
     <form action="registerauth.php" method="POST">
-        姓名 <input type="text" name="username">
-        帳號 <input type="text" name="account">
-        密碼 <input type="password" name="password">
+    <!-- enctype="multipart/form-data" -->
+        姓名 <input required type="text" name="username">
+        帳號 <input required type="text" name="account">
+        密碼 <input required type="password" name="password">
+        <!-- 個人圖像 <input type="file" name="pfp"> -->
         <button type="submit" class="btn btn-dark btn-lg">註冊</button>
     </form>
 </body>

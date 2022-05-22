@@ -23,6 +23,7 @@
 
         if ($resultCheck > 0){
             // 資料庫內有這個帳號
+
             while ($row = mysqli_fetch_assoc($result)){
                 echo $row['uid']."<br>";
                 echo $row['username']."<br>";
@@ -31,10 +32,10 @@
 
                 $_SESSION['uid'] = $row['uid'];
                 echo "session uid 現在是 ".$_SESSION['uid'];
-                header( "refresh:2;url=browse.php" );
+                // header( "refresh:2;url=browse.php" );
+                header('Location: browse.php');
             }
             
-
         } else {
             // 資料庫內沒有查到這個帳號
             // 所以將使用者重新導向回登入頁面
@@ -48,6 +49,10 @@
             header( "refresh:0;url=login.php" );
 
         }
+        // 釋放結果物件佔用的記憶體空間
+        mysqli_free_result($result); 
+        // 斷開SQL連接
+        mysqli_close($link);
     }
 
 ?>

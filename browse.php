@@ -49,44 +49,7 @@
     <title>Document</title>
 </head>
 <body>
-<section id="header">
-        <div class="flex-wrap">
-            <div class="fleft">
-                <img src="https://picsum.photos/100" alt="">
-                <span>Rent-A-Mate</span>
-            </div>
-
-            <div class="fright">
-                <?php
-                if (isset($_SESSION['uid'])){
-                ?>
-
-                <div class="listing">
-                    <img src="https://picsum.photos/100" alt="">
-                    <span>刊登物件</span>
-                </div>
-                <div class="user">
-                    <span><?php echo $username ?></span>
-                    <img src="https://picsum.photos/100" alt="">
-                </div>
-                <form action="logout.php" method="POST">
-                    <div class="logout">
-                    <button type="submit" class="btn btn-dark btn-lg">登出</button>
-                    </div>
-                </form>
-
-                <?php
-                } else {
-                ?>
-                <div>
-                    <a href="login.php" class="btn btn-dark btn-lg">登入</a>
-                </div>
-                <?php
-                }
-                ?>
-            </div>
-        </div>
-    </section>
+<?php require('require/header.php'); ?>
 
 <section id="browse-section">
 
@@ -140,6 +103,8 @@
             // 都沒房子ㄌ，尷尬
             echo "沒⋯⋯房⋯⋯可⋯⋯看⋯⋯";
         }
+        // 釋放結果物件佔用的記憶體空間
+        mysqli_free_result($result); 
         ?>
         </div>
     </div>
