@@ -36,3 +36,7 @@ img.climg{
     display: flex;
     justify-content: center;
 }
+
+.btn{
+    line-height: 2em;
+}

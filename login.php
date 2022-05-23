@@ -34,9 +34,9 @@
         <h1>登入美好。</h1>
         <form action="loginauth.php" method="POST">
             <h3>帳號</h3>
-            <input class="form-control form-control-lg" type="text" name="account">
+            <input class="form-control form-control-lg" type="text" name="account" required>
             <h3>密碼</h3>
-            <input class="form-control form-control-lg" type="password" name="password">
+            <input class="form-control form-control-lg" type="password" name="password" required>
 
             <br><br>
             <div class="d-grid gap-2 col-20 mx-auto">

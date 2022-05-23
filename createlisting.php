@@ -60,8 +60,8 @@
             </div>
 
             <br>
-            <div class="d-grid gap-2 col-3 mx-auto">
-                <input type="submit" class="btn btn-lg btn-primary" value="刊登">
+            <div class="d-grid gap-2 col-20 mx-auto">
+                <input type="submit" class="btn btn-lg btn-dark" value="刊登">
             </div>
         </form>
     </div>
@@ -75,4 +75,5 @@
 </section>
 
 </body>
+
 </html>

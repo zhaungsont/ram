@@ -58,3 +58,13 @@ img.lw-right {
     width: 100%;
     object-fit: cover
 }
+
+footer{
+    margin-top: 7em;
+    text-align: center;
+    color: rgb(158, 158, 158);
+}
+
+footer a{
+    color: rgb(255, 206, 127);
+}
