@@ -23,18 +23,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>登入租隊友</title>
+    <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
 <?php require('require/header.php'); ?>
+<div class="loginwrapper">
+    <img class="lwrap" src="public/ram-cover2.png" alt="室內裝潢">
+    <div class="rwrap">
+        <h1>登入美好。</h1>
+        <form action="loginauth.php" method="POST">
+            <h3>帳號</h3>
+            <input class="form-control form-control-lg" type="text" name="account">
+            <h3>密碼</h3>
+            <input class="form-control form-control-lg" type="password" name="password">
 
-    <h1>Log in</h1>
-    <form action="loginauth.php" method="POST">
-        帳號 <input type="text" name="account">
-        密碼 <input type="password" name="password">
-        <button type="submit" class="btn btn-dark btn-lg">登入</button>
-        <a href="register.php" class="btn btn-light btn-lg" role="button">註冊</a>
-    </form>
+            <br><br>
+            <div class="d-grid gap-2 col-20 mx-auto">
+                <button type="submit" class="btn btn-dark btn-lg">登入</button>
+                <a href="register.php" class="btn btn-outline-dark btn-lg" role="button">註冊</a>
+            </div>
+            
+        </form>
+    </div>
+</div>
 
 </body>
 </html>

@@ -89,7 +89,7 @@
                             <input type="hidden" name="hdesc" value=<?php echo $hdesc ?>>
                             <input type="hidden" name="hprice" value=<?php echo $hprice ?>>
 
-                            <input type="submit" class="btn btn-primary" value="立馬訂購">
+                            <input type="submit" class="btn btn-dark btn-lg" value="立馬訂購">
                         </form>
                     </div>
                     </div>

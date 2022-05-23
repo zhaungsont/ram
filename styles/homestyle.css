@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans TC', sans-serif;
+    background-color: bisque;
 }
 
 
@@ -27,12 +28,12 @@ body{
 }
 
 #landing-zone h1{
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .landing-wrapper{
-    margin: auto;
-    width: 80%;
+    margin: 3em 10%;
+    /* width: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,14 +41,20 @@ body{
 
 .lw-left{
     /* width: 70%; */
+    margin-right: 2em;
+}
+
+.lw-left p{
+    font-size: 1.5em;
+    text-align: justify;
+    margin: 1em auto;
 }
 
 .lw-right{
     width: 100%;
 }
 
-.lw-right img{
-    max-width: 100%;
-    display: block;
-    margin: auto;
+img.lw-right {
+    width: 100%;
+    object-fit: cover
 }

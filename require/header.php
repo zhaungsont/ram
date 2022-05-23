@@ -20,7 +20,7 @@
 <section id="header">
         <div class="flex-wrap">
             <div class="fleft">
-            <a href="home.php"><img class="logo" src="public/home.png" alt="go home"></a>
+                <a href="home.php"><img class="logo" src="public/home.png" alt="go home"></a>
                 <span><a href="home.php">Rent-A-Mate</a></span>
             </div>
 
@@ -30,13 +30,15 @@
                 ?>
 
                 <div class="listing">
-                <a href="createlisting.php"><img class="logo" src="public/upload.png" alt="upload new listing"></a>
+                    <a href="createlisting.php"><img class="logo" src="public/upload.png" alt="upload new listing"></a>
                     <span><a href="createlisting.php">刊登物件</a></span> 
                 </div>
+
                 <div class="user">
-                    <span><?php echo $username ?></span>
                     <img  class="logo" src="public/user.png" alt="user profile photo">
+                    <span><?php echo $username ?></span>
                 </div>
+
                 <form action="logout.php" method="POST">
                     <div class="logout">
                     <button type="submit" class="btn btn-outline-light btn-lg">登出</button>
@@ -47,7 +49,7 @@
                 } else {
                 ?>
                 <div>
-                    <a href="login.php" class="btn btn-dark btn-lg">登入</a>
+                    <a href="login.php" class="btn btn-outline-light btn-lg">登入</a>
                 </div>
                 <?php
                 }

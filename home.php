@@ -37,7 +37,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/homestyle.css">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- 共用CSS -->
@@ -46,7 +45,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="styles/homestyle.css">
     <title>租隊友</title>
 </head>
 
@@ -57,12 +57,14 @@
         <div class="landing-wrapper">
             <div class="lw-left">
                 <h1>租屋進行式</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni praesentium ullam a. Nesciunt, at necessitatibus adipisci molestias impedit quas debitis culpa? Adipisci sunt facilis magnam veritatis vero maxime magni harum.</p>
+                <p>隨著輕旅行的概念越來越多人嚮往，我們需要一個方便即時、簡單明瞭的訂房網站。
+                租隊友簡單實用，不僅貼近我們日常生活，更聯繫起房客與房東的心！
+                </p>
                 <a href="browse.php" class="btn btn-dark btn-lg">立即看房</a>
             </div>
-            <div class="lw-right">
-                <img src="https://picsum.photos/600/800" alt="">
-            </div>
+            <!-- <div class="lw-right"> -->
+                <img class="lw-right" src="public/ram-cover.png" alt="bunch of houses">
+            <!-- </div> -->
         </div>
     </section>
 

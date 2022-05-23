@@ -2,6 +2,11 @@
     margin: 10em 15% 0 15%;
 }
 
+form {
+    max-width: 40em;
+    min-width: 80%;
+}
+
 form h1{
     font-size: 4em;
 }
@@ -13,6 +18,7 @@ form h3{
 .clflex{
     display: flex;
     justify-content:space-between;
+    align-items: center;
 }
 
 .clleft{

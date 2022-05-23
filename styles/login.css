@@ -1,0 +1,29 @@
+.loginwrapper{
+    display: flex;
+    margin: 4em 10% 0 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+img.lwrap{
+    width: 50%;
+    object-fit: cover;
+}
+
+h1{
+    font-size: 4em;
+}
+
+form h3{
+    margin-top: 0.5em;
+}
+
+form {
+    margin-top: 2em;
+    min-width: 20em;
+    max-width: 60%;
+}
+
+.rwrap{
+    flex-grow: 2;
+}
