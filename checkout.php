@@ -52,6 +52,10 @@
                 $hdesc =  $row['hdesc'];
                 $hprice = $row['hprice'];
                 $havailability = $row['havailability'];
+
+                $fee = (int)($hprice * 0.1);
+                $actualprice = $hprice + $fee;
+                // echo $fee."<br>".$actualprice;
             }
         } else {
             echo "錯誤";
@@ -80,7 +84,57 @@
 <?php require('require/header.php'); ?>
 
     <section id="checkout-section">
-        <div class="decoration">
+        <h1><?php echo $username ?>，這是您的訂單</h1>
+        <div class="cwrapper">
+            <div class="lwrap">
+                <h2><?php echo $hname ?></h2>
+                <!-- <h3>訂購人：<?php echo $username ?></h3> -->
+                <img src="https://picsum.photos/400/200">
+                <!-- <h2>訂單資訊</h2> -->
+            </div>
+            <div class="rwrap">
+                <h3>屋件簡介</h3>
+                <p><?php echo $hdesc ?></p>
+
+                <br>
+                <div class="sum">
+                    <h3>每晚售價</h3>
+                    <h3><?php echo $hprice ?>元</h3>
+                </div>
+                <div class="sum">
+                    <h3>加收一成服務費</h3>
+                    <h3><?php echo $fee ?>元</h3>
+                </div>
+                <hr>
+                <div class="sum">
+                    <h2>總金額</h2>
+                    <h3><?php echo $actualprice ?>元</h3>
+                </div>
+                <br>
+
+                <!-- <input type="text" class="form-control form-control-lg" name=""> -->
+                <div class="inpflex">
+                    <h3>入住&nbsp;</h3>
+                    <!-- <div class="input-group mb-3">
+                        <span class="input-group-text">入住</span>
+                        <input required type="text" class="form-control form-control-lg" placeholder="1" name="nights">
+                        <span class="input-group-text">個晚上</span>
+                    </div> -->
+                    <form action="success.php" method="POST">
+                    <div class="inpflexflex">
+                        <input type="text" class="form-control" placeholder="1" name="nights">
+                        <h3>&nbsp;個晚上</h3>
+                    </div>
+                </div>
+                <input type="hidden" name="hid" value=<?php echo $hid ?>>
+                <input type="hidden" name="hname" value=<?php echo $hname ?>>
+                <div class="d-grid gap-2 col-20 mx-auto">
+                    <button type="submit" class="btn btn-dark btn-lg orderbtn">訂房</button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="decoration">
             <img src="https://picsum.photos/400/200">
             <div class="form">
                 <h1><?php echo $username ?>，這是您的訂單</h1>
@@ -100,7 +154,7 @@
 
                 </form>
             </div>
-        </div>
+        </div> -->
     </section>
 </body>
 

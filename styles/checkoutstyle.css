@@ -5,7 +5,7 @@ body{
 }
 
 
-#checkout-section{
+/* #checkout-section{
     margin: 10em 30%;
 
 }
@@ -32,4 +32,76 @@ body{
 .buttonflex{
     display: flex;
     justify-content: center;
+} */
+
+#checkout-section{
+    margin: 10em 20%;
+}
+
+h1{
+    font-size: 4em;
+}
+
+p{
+    text-align: justify;
+}
+
+.cwrapper{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 2em;
+}
+
+.lwrap{
+    margin: 0 2em 0 0;
+    width: 100%;
+}
+
+.lwrap img{
+    width: 100%;
+    margin: auto inherit;
+    border-radius: 15px;
+    margin-bottom: 2em;
+}
+
+.lwrap h2{
+    font-size: 3em;
+}
+
+.rwrap{
+    margin: auto 0 auto 2em;
+    flex-grow: 2;
+    max-width: 40%;
+}
+
+.sum{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inpflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inpflex h3{
+    flex-shrink: 0;
+}
+
+.form-control{
+    /* max-width: 70%; */
+
+}
+
+.inpflexflex{
+    display: flex;
+    justify-content: center;
+
+}
+
+.orderbtn{
+    margin-top: 2em;
+    line-height: 2em;
 }

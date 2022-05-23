@@ -27,6 +27,11 @@
             } 
             
         }
+        if ($_POST['nights'] === ''){
+            $nights = 1;
+        } else {
+            $nights = $_POST['nights'];
+        }
 
         $hid = $_POST['hid'];
         $hname = $_POST['hname'];
@@ -40,6 +45,7 @@
 
         echo "<h1>感謝您在租隊友訂房！</h1>";
         echo "<h3>祝您在 $hname 有美好的體驗！</h2>";
+        echo "<h4>您的訂單：入住 $nights 個晚上</h4>";
         header( "refresh:2;url=home.php" );
     }
 ?>

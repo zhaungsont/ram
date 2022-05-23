@@ -21,7 +21,7 @@
         <div class="flex-wrap">
             <div class="fleft">
                 <a href="home.php"><img class="logo" src="public/home.png" alt="go home"></a>
-                <span><a href="home.php">Rent-A-Mate</a></span>
+                <span><a href="home.php">租隊友 Rent-A-Mate</a></span>
             </div>
 
             <div class="fright">

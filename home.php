@@ -75,7 +75,7 @@
 </body>
 <footer>
     Copyright ©2022<br>
-    作者：莊天均、吳俊翰、紀柔安、簡銘輝 <br>
+    網站製作：莊天均、吳俊翰、紀柔安、簡銘輝 <br>
     <a href="https://www.flaticon.com/free-icons/logout" title="logout icons">Logout icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Freepik - Flaticon</a>
