@@ -20,8 +20,8 @@
 <section id="header">
         <div class="flex-wrap">
             <div class="fleft">
-                <img src="https://picsum.photos/100" alt="">
-                <span>Rent-A-Mate</span>
+            <a href="home.php"><img class="logo" src="public/home.png" alt="go home"></a>
+                <span><a href="home.php">Rent-A-Mate</a></span>
             </div>
 
             <div class="fright">
@@ -30,16 +30,16 @@
                 ?>
 
                 <div class="listing">
-                    <img src="https://picsum.photos/100" alt="">
-                    <span>刊登物件</span>
+                <a href="createlisting.php"><img class="logo" src="public/upload.png" alt="upload new listing"></a>
+                    <span><a href="createlisting.php">刊登物件</a></span> 
                 </div>
                 <div class="user">
                     <span><?php echo $username ?></span>
-                    <img src="https://picsum.photos/100" alt="">
+                    <img  class="logo" src="public/user.png" alt="user profile photo">
                 </div>
                 <form action="logout.php" method="POST">
                     <div class="logout">
-                    <button type="submit" class="btn btn-dark btn-lg">登出</button>
+                    <button type="submit" class="btn btn-outline-light btn-lg">登出</button>
                     </div>
                 </form>
 

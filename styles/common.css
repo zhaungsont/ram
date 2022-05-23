@@ -3,11 +3,23 @@
     background-color: black;
     color: aliceblue;
     justify-content: space-between;
+
+    padding: 1em 1em 1em 0;
 }
 
 .flex-wrap img{
     display: inline;
     vertical-align: middle; 
+}
+
+.logo{
+    max-width: 50px;
+    margin: auto 1em;
+}
+
+.fleft{
+    display: flex;
+    align-items: center;
 }
 
 .fright{
@@ -16,9 +28,48 @@
 
 .listing{
     margin-right: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    align-items: center;
 }
 
 .logout{
     display: flex;
     align-items: center;
+}
+
+span a{
+    text-decoration: none;
+    
+}
+
+button{
+    /* Make it behaves like URL */
+    cursor:pointer; 
+
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+
+a{
+    font-weight: bold;
+    color: #ffffff;
+    transition-duration: 0.2s;
+    text-decoration: none;
+}
+
+a:hover{
+    /* color: #6166B3; */
+    /* background-color: #142F43; */
+    color:rgb(255, 252, 98);
+
 }

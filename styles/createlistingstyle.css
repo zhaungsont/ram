@@ -1,0 +1,32 @@
+#createlisting {
+    margin: 10em 15% 0 15%;
+}
+
+form h1{
+    font-size: 4em;
+}
+
+form h3{
+    margin-top: 1em;
+}
+
+.clflex{
+    display: flex;
+    justify-content:space-between;
+}
+
+.clleft{
+    /* width: 50%; */
+    flex-grow: 2;
+    margin-right: 2em;
+}
+
+img.climg{
+    width: 40%;
+    object-fit: cover
+}
+
+.btnflex{
+    display: flex;
+    justify-content: center;
+}
