@@ -70,6 +70,7 @@
                 $hdesc =  $row['hdesc'];
                 $hprice = $row['hprice'];
                 $havailability = $row['havailability'];
+                $haddress = $row['haddress'];
 
                 // 把介紹文縮短一點，使用的語法是 ternary operator
                 $truncDesc = (strlen($hdesc) > 40) ? substr($hdesc,0,37).'...' : $hdesc;
@@ -80,6 +81,7 @@
                     <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $hname ?></h5>
+                        <p class="card-text address"><?php echo $haddress ?></p>
                         <p class="card-text"><?php echo $truncDesc ?></p>
                         
                         <form action="checkout.php" method="POST">

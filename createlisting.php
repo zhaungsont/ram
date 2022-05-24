@@ -49,6 +49,8 @@
             <br>
             <h3>屋件名稱</h3>
             <input class="form-control form-control-lg" type="text" name="hname" placeholder="屋件名稱⋯⋯" required>
+            <h3>屋件地址</h3>
+            <input class="form-control form-control-lg" type="text" name="haddress" placeholder="屋件地址⋯⋯" required>
             <h3>屋件簡介</h3>
             <textarea class="form-control form-control-lg" name="hdesc"cols="30" rows="5" placeholder="屋件簡介⋯⋯" required></textarea>
 

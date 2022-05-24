@@ -11,3 +11,7 @@
 .card{
     margin: 1em;
 }
+
+.address{
+    font-weight: bold;
+}
