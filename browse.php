@@ -105,7 +105,10 @@
         }
         // 釋放結果物件佔用的記憶體空間
         mysqli_free_result($result); 
+        // 斷開SQL連接
+        mysqli_close($link);
         ?>
+        
         </div>
     </div>
 </section>
