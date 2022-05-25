@@ -16,6 +16,8 @@
     if (!isset($_SESSION['uid'])){
         header("Location: login.php");
     }
+
+    $uid = $_SESSION['uid'];
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +62,7 @@
             <input type="text" class="form-control" placeholder="售價⋯⋯" name="hprice" required>
             <span class="input-group-text">／每晚</span>
             </div>
-
+            <input type="hidden" name="uid" value=<?php echo $uid ?>>
             <br>
             <div class="d-grid gap-2 col-20 mx-auto">
                 <input type="submit" class="btn btn-lg btn-dark" value="刊登">

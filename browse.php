@@ -71,6 +71,20 @@
                 $hprice = $row['hprice'];
                 $havailability = $row['havailability'];
                 $haddress = $row['haddress'];
+                $hownerid = $row['howner'];
+
+                // 找屋主名字
+                $howner = "SELECT * FROM user WHERE uid = $hownerid;";
+                $hownerResult = mysqli_query($link, $howner);
+                $hownerResultCheck = mysqli_num_rows($hownerResult);
+                if ($hownerResultCheck > 0){
+                    while ($row = mysqli_fetch_assoc($hownerResult)){
+                        $hownerName = $row['username'];
+                    }
+                } else {
+                    $hownerName = '';
+                }
+                
 
                 // 把介紹文縮短一點，使用的語法是 ternary operator
                 $truncDesc = (strlen($hdesc) > 40) ? substr($hdesc,0,37).'...' : $hdesc;
@@ -83,9 +97,10 @@
                         <h5 class="card-title"><?php echo $hname ?></h5>
                         <p class="card-text address"><?php echo $haddress ?></p>
                         <p class="card-text"><?php echo $truncDesc ?></p>
+                        <p class="card-text">屋主 <?php echo $hownerName ?></p>
+                        <h2>$<?php echo $hprice ?> / 每晚</h2>
                         
                         <form action="checkout.php" method="POST">
-                            <h2>$<?php echo $hprice ?> / 每晚</h2>
                             <input type="hidden" name="hid" value=<?php echo $hid ?>>
                             <input type="hidden" name="hname" value=<?php echo $hname ?>>
                             <input type="hidden" name="hdesc" value=<?php echo $hdesc ?>>

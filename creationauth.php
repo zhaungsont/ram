@@ -14,6 +14,7 @@ if (!isset($_SESSION['uid'])){
     $hdesc = $_POST['hdesc'];
     $hprice = $_POST['hprice'];
     $haddress = $_POST['haddress'];
+    $uid = $_POST['uid'];
     if (!is_numeric($hprice)){
         $message = "售價欄位請輸入純數字內容！";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -32,12 +33,13 @@ if (!$link) {
     exit();
 } else {
     // 將這筆資料存進 MySQL
-    $creation = 'INSERT INTO house(hname, hdesc, hprice, havailability, haddress) 
-    VALUES ("'.$hname.'", "'.$hdesc.'", "'.$hprice.'", "1","'.$haddress.'");';
+    $creation = 'INSERT INTO house(hname, hdesc, hprice, havailability, haddress, howner) 
+    VALUES ("'.$hname.'", "'.$hdesc.'", "'.$hprice.'", "1","'.$haddress.'", '.(int)$uid.');';
     $results = mysqli_query($link, $creation);
     if ($results){
-        echo "<h1>刊登成功！正在重新導向到屋件一覽</h1>";
-        header( "refresh:2;url=browse.php" );
+        $message = "刊登成功！正在重新導向到屋件一覽";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        header( "refresh:0;url=browse.php" );
     } else {
         echo mysqli_error($link);
     }
