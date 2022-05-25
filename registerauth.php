@@ -4,12 +4,12 @@
     $inputAccount = $_POST['account'];
     $inputPassword = $_POST['password'];
     $inputUsername = $_POST['username'];
-    
+
     // 這兩個 Session 資料用來傳給 /register 頁面，以防使用者註冊失敗要全部重輸
     $_SESSION['inputAccount'] = $inputAccount;
     $_SESSION['inputUsername'] = $inputUsername;
 
-    // 密碼規定：長度 5-20 字元為限，至少包含一大寫英文、一小寫英文
+    // 密碼規定：長度 5-20 字元為限，至少包含一大寫英文、一小寫英文、一數字
     $isnumeric = false;
     $isupper = false;
     $islower = false;
@@ -85,7 +85,7 @@
 
     // }
 
-    echo "預註冊帳號密碼: $inputAccount, $inputPassword <br>";
+    // echo "預註冊帳號密碼: $inputAccount, $inputPassword <br>";
     $link = mysqli_connect(
         'localhost', // mysql 主機名稱
         'root', // 使用者名稱
@@ -97,7 +97,7 @@
         echo "MySQL 連線錯誤<br>";
         exit();
     } else {
-        echo "MySQL ram 資料庫連接成功<br>";
+        // echo "MySQL ram 資料庫連接成功<br>";
 
         // 檢查帳號是否有重複
         $sql = "SELECT *  FROM user WHERE account = '$inputAccount';";
