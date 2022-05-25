@@ -4,6 +4,43 @@
     $inputAccount = $_POST['account'];
     $inputPassword = $_POST['password'];
     $inputUsername = $_POST['username'];
+    
+    // 這兩個 Session 資料用來傳給 /register 頁面，以防使用者註冊失敗要全部重輸
+    $_SESSION['inputAccount'] = $inputAccount;
+    $_SESSION['inputUsername'] = $inputUsername;
+
+    // 密碼規定：長度 5-20 字元為限，至少包含一大寫英文、一小寫英文
+    $isnumeric = false;
+    $isupper = false;
+    $islower = false;
+    $pwarray = str_split($inputPassword);
+    if (strlen($inputPassword) < 4 || strlen($inputPassword) > 20){
+        $message = "密碼長度以5到20字元為限！";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        header( "refresh:0;url=register.php" );
+        exit();
+    }
+    foreach ($pwarray as $char) {
+        if (ctype_upper($char)){
+            $isupper = true;
+        }
+        if (ctype_lower($char)){
+            $islower = true;
+        }
+        if (is_numeric($char)){
+            $isnumeric = true;
+        }
+    }
+    if (!$isupper || !$islower || !$isnumeric){
+        $message = "密碼需至少包含數字和英文大小寫各一字元！！";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        header( "refresh:0;url=register.php" );
+        exit();
+    }
+
+    // 註冊驗證成功就會繼續往下，就不需要以下兩個session了
+    unset($_SESSION["inputAccount"]);
+    unset($_SESSION["inputUsername"]);
 
     // ＝＝＝＝＝＝＝＝還沒研究完的上傳圖像＝＝＝＝＝＝＝＝
     // if (isset($_FILES['pfp'])){
@@ -80,11 +117,12 @@
             mysqli_query($link, $registration);
             $last_id = $link->insert_id;
             $_SESSION['uid'] = $last_id;
-            echo "last id is $last_id <br>";
-            echo "<h1>註冊成功！重新導向到首頁⋯⋯</h1>";
+            // echo "last id is $last_id <br>";
+            // echo "<h1>註冊成功！重新導向到首頁⋯⋯</h1>";
 
-
-            header( "refresh:2;url=browse.php" );
+            $message = "註冊成功！歡迎使用租隊友";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            header( "refresh:0;url=browse.php" );
         }
         // 釋放結果物件佔用的記憶體空間
         mysqli_free_result($result); 

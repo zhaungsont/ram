@@ -7,6 +7,15 @@
         exit();
     }
 
+    // 如果使用者輸入失敗跳回來，可以把使用者先前輸入的資料key進去避免麻煩
+    if (isset($_SESSION)){
+        $inputAccount = $_SESSION['inputAccount'];
+        $inputUsername = $_SESSION['inputUsername'];
+    } else {
+        $inputAccount = '';
+        $inputUsername = '';
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +45,11 @@
     <form action="registerauth.php" method="POST">
     <!-- enctype="multipart/form-data" -->
         <h3>姓名</h3>
-        <input class="form-control form-control-lg" required type="text" name="username">
+        <input class="form-control form-control-lg" required type="text" name="username" placeholder="Margaret Hamilton" value=<?php echo $inputUsername ?>>
         <h3>帳號</h3>
-        <input class="form-control form-control-lg" required type="text" name="account">
+        <input class="form-control form-control-lg" required type="email" name="account" placeholder="apollo@nasa.com" value=<?php echo $inputAccount ?>>
         <h3>密碼</h3>
-        <input class="form-control form-control-lg" required type="password" name="password">
+        <input class="form-control form-control-lg" required type="password" name="password" placeholder="長度5~20字元，至少一大寫一小寫一數字">
         <!-- 個人圖像 <input type="file" name="pfp"> -->
         <br><br>
         <div class="d-grid gap-2 col-20 mx-auto">
@@ -50,5 +59,4 @@
     </div>
 </div>
 </body>
-
 </html>
