@@ -1,6 +1,13 @@
 <?php
     session_start();
 
+    if (isset($_SESSION['uid'])){
+        $uid = $_SESSION['uid'];
+    } else {
+        // 沒有登入或沒有點選下單就到此頁面
+        header('Location: login.php');
+    }
+
     $link = mysqli_connect(
         'localhost', // mysql 主機名稱
         'root', // 使用者名稱
@@ -11,24 +18,25 @@
     if (!$link) {
         echo "MySQL 連線錯誤<br>";
         exit();
-    } else {
-        // 有登入才給 username ，沒登入沒關係，就省略
-        if (isset($_SESSION['uid'])){
-            $uid = $_SESSION['uid'];
-            $sql = "SELECT *  FROM user WHERE uid = '$uid';";
-            $result = mysqli_query($link, $sql);
-            $resultCheck = mysqli_num_rows($result);
+    } 
+    // else {
+    //     // 有登入才給 username ，沒登入沒關係，就省略
+    //     if (isset($_SESSION['uid'])){
+    //         $uid = $_SESSION['uid'];
+    //         $sql = "SELECT *  FROM user WHERE uid = '$uid';";
+    //         $result = mysqli_query($link, $sql);
+    //         $resultCheck = mysqli_num_rows($result);
 
-            if ($resultCheck > 0){
-                // 資料庫內有這個帳號
-                while ($row = mysqli_fetch_assoc($result)){
-                    $username =  $row['username'];
-                }
-            } 
+    //         if ($resultCheck > 0){
+    //             // 資料庫內有這個帳號
+    //             while ($row = mysqli_fetch_assoc($result)){
+    //                 $username =  $row['username'];
+    //             }
+    //         } 
             
-        }
+    //     }
 
-    }
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +62,7 @@
 <section id="browse-section">
 
     <div class="container">
-        <div class="row row-cols-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
         <?php
         // 載入所有房型
         $houseTable = "SELECT *  FROM house WHERE havailability = '1';";
@@ -91,25 +99,32 @@
                 // if ($havailability == '1'){
                 ?>
                     <div class="col d-flex align-items-stretch">
-                    <div class="card" style="width: 18rem;">
-                    <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $hname ?></h5>
-                        <p class="card-text address"><?php echo $haddress ?></p>
-                        <p class="card-text"><?php echo $truncDesc ?></p>
-                        <p class="card-text">屋主 <?php echo $hownerName ?></p>
-                        <h2>$<?php echo $hprice ?> / 每晚</h2>
-                        
-                        <form action="checkout.php" method="POST">
-                            <input type="hidden" name="hid" value=<?php echo $hid ?>>
-                            <input type="hidden" name="hname" value=<?php echo $hname ?>>
-                            <input type="hidden" name="hdesc" value=<?php echo $hdesc ?>>
-                            <input type="hidden" name="hprice" value=<?php echo $hprice ?>>
-
-                            <input type="submit" class="btn btn-dark btn-lg" value="立馬訂購">
-                        </form>
-                    </div>
-                    </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $hname ?></h5>
+                                <div class="location">
+                                    <img src="public/location.png" alt="location pin">
+                                    <span class="card-text address"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
+                                </div>
+                                <div class="owner">
+                                    <img src="public/user.png" alt="user icon">
+                                    <span class="card-text"><?php echo empty($hownerName) ? '匿名' : $hownerName ?></span>
+                                </div>
+                                <p class="card-text"><?php echo $truncDesc ?></p>
+                                <h2>$<?php echo $hprice ?> / 每晚</h2>
+                                
+                                <form action="checkout.php" method="POST">
+                                    <input type="hidden" name="hid" value=<?php echo $hid ?>>
+                                    <input type="hidden" name="hname" value=<?php echo $hname ?>>
+                                    <input type="hidden" name="hdesc" value=<?php echo $hdesc ?>>
+                                    <input type="hidden" name="hprice" value=<?php echo $hprice ?>>
+                                    <div class="orderbtn">
+                                        <input type="submit" class="btn btn-dark" value="立馬訂購">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 <?php
                 // }

@@ -34,8 +34,8 @@
                 </div>
 
                 <div class="user">
-                    <img  class="logo" src="public/user.png" alt="user profile photo">
-                    <span><?php echo $username ?></span>
+                    <a href="listings.php"><img  class="logo" src="public/user.png" alt="user profile photo"></a>
+                    <span><a href="listings.php"><?php echo $username ?></a></span>
                 </div>
 
                 <form action="logout.php" method="POST">

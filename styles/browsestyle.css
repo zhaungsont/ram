@@ -15,3 +15,16 @@
 .address{
     font-weight: bold;
 }
+
+.location img{
+    width: 1em;
+}
+
+.owner img{
+    width: 1em;
+}
+
+.orderbtn{
+    display: flex;
+    justify-content: end;
+}

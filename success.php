@@ -35,7 +35,7 @@
 
         $hid = $_POST['hid'];
         $hname = $_POST['hname'];
-        $updateSql = "UPDATE house SET havailability = '0' WHERE house.hid = '$hid';";
+        $updateSql = "UPDATE house SET havailability = '0', hrenter = ".(int)$uid." WHERE house.hid = '$hid';";
         mysqli_query($link, $updateSql);
 
         // 釋放結果物件佔用的記憶體空間
@@ -43,10 +43,9 @@
         // 斷開SQL連接
         mysqli_close($link);
 
-        echo "<h1>感謝您在租隊友訂房！</h1>";
-        echo "<h3>祝您在 $hname 有美好的體驗！</h2>";
-        echo "<h4>您的訂單：入住 $nights 個晚上</h4>";
-        header( "refresh:2;url=home.php" );
+        $message = "恭喜！訂房成功🎉 您現在可以在個人頁面檢視您的屋件。";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        header( "refresh:0;url=listings.php" );
     }
 ?>
 

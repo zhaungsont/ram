@@ -33,13 +33,13 @@ if (!$link) {
     exit();
 } else {
     // 將這筆資料存進 MySQL
-    $creation = 'INSERT INTO house(hname, hdesc, hprice, havailability, haddress, howner) 
-    VALUES ("'.$hname.'", "'.$hdesc.'", "'.$hprice.'", "1","'.$haddress.'", '.(int)$uid.');';
+    $creation = 'INSERT INTO house(hname, hdesc, hprice, havailability, haddress, howner, hrenter) 
+    VALUES ("'.$hname.'", "'.$hdesc.'", "'.$hprice.'", "1","'.$haddress.'", '.(int)$uid.', 0);';
     $results = mysqli_query($link, $creation);
     if ($results){
-        $message = "刊登成功！正在重新導向到屋件一覽";
+        $message = "恭喜！刊登成功🎉 您現在可以在個人頁面檢視您的屋件。";
         echo "<script type='text/javascript'>alert('$message');</script>";
-        header( "refresh:0;url=browse.php" );
+        header( "refresh:0;url=listings.php" );
     } else {
         echo mysqli_error($link);
     }
