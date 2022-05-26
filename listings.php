@@ -70,7 +70,7 @@
                     <div class="listing-entry">
                         <img class="entry-image" src="https://picsum.photos/300/200" alt="random pic">
                         <div class="entry-desc">
-                            <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo $haddress ?></span>
+                            <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
                             <p><?php echo $hdesc ?></p>
                         </div>
                         <div class="entry-info">
@@ -112,12 +112,14 @@
                     $havailability = $row['havailability'];
                     $haddress = $row['haddress'];
                     $hownerid = $row['howner'];
+
+                    // $haddress = ($haddress == '' ? '台灣' : '');
                     ?>
 
                     <div class="listing-entry">
                         <img class="entry-image" src="https://picsum.photos/300/200" alt="random pic">
                         <div class="entry-desc">
-                            <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo $haddress ?></span>
+                            <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
                             <p><?php echo $hdesc ?></p>
                         </div>
                         <div class="entry-info">
