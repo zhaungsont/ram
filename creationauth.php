@@ -14,6 +14,7 @@ if (!isset($_SESSION['uid'])){
     $hdesc = $_POST['hdesc'];
     $hprice = $_POST['hprice'];
     $haddress = $_POST['haddress'];
+    $himglink = $_POST['himglink'];
     $uid = $_POST['uid'];
     if (!is_numeric($hprice)){
         $message = "售價欄位請輸入純數字內容！";
@@ -33,8 +34,8 @@ if (!$link) {
     exit();
 } else {
     // 將這筆資料存進 MySQL
-    $creation = 'INSERT INTO house(hname, hdesc, hprice, havailability, haddress, howner, hrenter) 
-    VALUES ("'.$hname.'", "'.$hdesc.'", "'.$hprice.'", "1","'.$haddress.'", '.(int)$uid.', 0);';
+    $creation = 'INSERT INTO house(hname, hdesc, hprice, havailability, haddress, howner, hrenter, himglink) 
+    VALUES ("'.$hname.'", "'.$hdesc.'", "'.$hprice.'", "1","'.$haddress.'", '.(int)$uid.', 0,"'.$himglink.'");';
     $results = mysqli_query($link, $creation);
     if ($results){
         $message = "恭喜！刊登成功🎉 您現在可以在個人頁面檢視您的屋件。";

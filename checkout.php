@@ -52,6 +52,7 @@
                 $hdesc =  $row['hdesc'];
                 $hprice = $row['hprice'];
                 $havailability = $row['havailability'];
+                $himglink = $row['himglink'];
 
                 $fee = (int)($hprice * 0.1);
                 $actualprice = $hprice + $fee;
@@ -89,7 +90,7 @@
             <div class="lwrap">
                 <h2><?php echo $hname ?></h2>
                 <!-- <h3>訂購人：<?php echo $username ?></h3> -->
-                <img src="https://picsum.photos/400/200">
+                <img src=<?php echo empty($himglink) ? "https://picsum.photos/300/200" : "$himglink" ?> alt="房屋照片">
                 <!-- <h2>訂單資訊</h2> -->
             </div>
             <div class="rwrap">

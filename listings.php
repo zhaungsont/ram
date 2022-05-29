@@ -65,10 +65,11 @@
                     $havailability = $row['havailability'];
                     $haddress = $row['haddress'];
                     $hownerid = $row['howner'];
+                    $himglink = $row['himglink'];
                     ?>
 
                     <div class="listing-entry">
-                        <img class="entry-image" src="https://picsum.photos/300/200" alt="random pic">
+                    <img class="entry-image" src=<?php echo empty($himglink) ? "https://picsum.photos/300/200" : "$himglink" ?> alt="房屋照片">
                         <div class="entry-desc">
                             <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
                             <p><?php echo $hdesc ?></p>
@@ -112,12 +113,13 @@
                     $havailability = $row['havailability'];
                     $haddress = $row['haddress'];
                     $hownerid = $row['howner'];
+                    $himglink = $row['himglink'];
 
                     // $haddress = ($haddress == '' ? '台灣' : '');
                     ?>
 
                     <div class="listing-entry">
-                        <img class="entry-image" src="https://picsum.photos/300/200" alt="random pic">
+                        <img class="entry-image" src=<?php echo empty($himglink) ? "https://picsum.photos/300/200" : "$himglink" ?> alt="房屋照片">
                         <div class="entry-desc">
                             <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
                             <p><?php echo $hdesc ?></p>
@@ -128,8 +130,15 @@
                                 <input type="hidden" name="uid" value=<?php echo $uid ?>>
                                 <input type="hidden" name="hid" value=<?php echo $hid ?>>
                                 <div class="d-grid gap-2 col-20 mx-auto">
-                                    <!-- WORK IN PROGRESS -->
-                                    <!-- <button type="submit" class="btn btn-outline-danger">取消刊登</button> -->
+
+                                <?php
+                                    if ($havailability == '0'){
+                                        echo "<button type='submit' class='btn btn-outline-danger' disabled>取消刊登</button>";
+                                        echo "<i>屋件出租中</i>";
+                                    } else {
+                                        echo "<button type='submit' class='btn btn-outline-danger'>取消刊登</button>";
+                                    }
+                                ?>
                                 </div>
                             </form>
                         </div>

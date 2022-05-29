@@ -80,6 +80,7 @@
                 $havailability = $row['havailability'];
                 $haddress = $row['haddress'];
                 $hownerid = $row['howner'];
+                $himglink = $row['himglink'];
 
                 // 找屋主名字
                 $howner = "SELECT * FROM user WHERE uid = $hownerid;";
@@ -100,7 +101,7 @@
                 ?>
                     <div class="col d-flex align-items-stretch">
                         <div class="card" style="width: 18rem;">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+                            <img src=<?php echo empty($himglink) ? "https://picsum.photos/300/200" : "$himglink" ?> class="card-img-top" alt="房屋照片">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $hname ?></h5>
                                 <div class="location">

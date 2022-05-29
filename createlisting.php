@@ -2,6 +2,9 @@
 
     session_start();
 
+    if (!isset($_SESSION['uid'])){
+        header("Location: login.php");
+    }
     $link = mysqli_connect(
         'localhost', // mysql 主機名稱
         'root', // 使用者名稱
@@ -13,9 +16,6 @@
         echo "MySQL 連線錯誤<br>";
         exit();
     } 
-    if (!isset($_SESSION['uid'])){
-        header("Location: login.php");
-    }
 
     $uid = $_SESSION['uid'];
 ?>
@@ -53,6 +53,8 @@
             <input class="form-control form-control-lg" type="text" name="hname" placeholder="屋件名稱⋯⋯" required>
             <h3>屋件地址</h3>
             <input class="form-control form-control-lg" type="text" name="haddress" placeholder="屋件地址⋯⋯" required>
+            <h3>照片連結</h3>
+            <input class="form-control form-control-lg" type="url" name="himglink" placeholder="非必填">
             <h3>屋件簡介</h3>
             <textarea class="form-control form-control-lg" name="hdesc"cols="30" rows="5" placeholder="屋件簡介⋯⋯" required></textarea>
 
