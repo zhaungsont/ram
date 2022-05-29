@@ -101,7 +101,7 @@
 
                 <br>
                 <div class="sum">
-                    <h3>每晚售價</h3>
+                    <h3>每日售價</h3>
                     <h3><?php echo $hprice ?>元</h3>
                 </div>
                 <div>
@@ -112,7 +112,7 @@
                     <h3><?php echo $fee ?>元</h3>
                 </div>
                 <div class="sum">
-                    <h3>每晚總金額</h3>
+                    <h3>每日總金額</h3>
                     <h3 id="phpActualPrice"><?php echo $actualprice ?>元</h3>
                 </div>
                 <hr>
@@ -170,7 +170,7 @@
                     </div>
 
                     <div class="input-group input-group-lg mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-sm">入住時間</span>
+                        <span class="input-group-text" id="inputGroup-sizing-sm">退房時間</span>
                         <select class="form-select" name="em" required>
                             <option value="" selected disabled>退房月份</option>
                             <option value="1">1月</option>
