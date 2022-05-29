@@ -27,11 +27,7 @@
             } 
             
         }
-        if ($_POST['nights'] === ''){
-            $nights = 1;
-        } else {
-            $nights = $_POST['nights'];
-        }
+        $price = $_POST['price'];
 
         $hid = $_POST['hid'];
         $hname = $_POST['hname'];
