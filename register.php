@@ -35,6 +35,8 @@
     <title>註冊租隊友</title>
     <!-- 拿 login 的 CSS 來用 -->
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" type="image/x-icon" href="public/logo.ico">
+
 </head>
 <body>
 <?php require('require/header.php'); ?>

@@ -38,6 +38,8 @@
     
     <link rel="stylesheet" href="styles/createlistingstyle.css">
     <title>刊登在租隊友上</title>
+    <link rel="icon" type="image/x-icon" href="public/logo.ico">
+
 </head>
 <body>
 <?php require('require/header.php'); ?>

@@ -82,6 +82,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     <title>Checkout</title>
     <link rel="stylesheet" href="styles/checkoutstyle.css">
+    <link rel="icon" type="image/x-icon" href="public/logo.ico">
+
 </head>
 <body>
 <?php require('require/header.php'); ?>

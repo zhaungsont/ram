@@ -25,7 +25,7 @@ if (!$link) {
     exit();
 } else {
 
-    $updateSql = "UPDATE house SET havailability = '1', hrenter = '0' WHERE house.hid = ".(int)$hid.";";
+    $updateSql = "UPDATE house SET havailability = '1', hrenter = '0', hsm = 0, hem = 0, hsd = 0, hed = 0  WHERE house.hid = ".(int)$hid.";";
     mysqli_query($link, $updateSql);
 
     // 斷開SQL連接
