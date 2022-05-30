@@ -96,26 +96,26 @@
                 <!-- <h2>訂單資訊</h2> -->
             </div>
             <div class="rwrap">
-                <h3>屋件簡介</h3>
+                <h4>屋件簡介</h4>
                 <p><?php echo $hdesc ?></p>
 
-                <br>
+                <hr>
+
                 <div class="sum">
-                    <h3>每日售價</h3>
-                    <h3><?php echo $hprice ?>元</h3>
+                    <h4>每日售價</h4>
+                    <h4><?php echo $hprice ?> 元</h4>
                 </div>
                 <div>
                     
                 </div>
                 <div class="sum">
-                    <h3>加收一成服務費</h3>
-                    <h3><?php echo $fee ?>元</h3>
+                    <h4>加收一成服務費</h4>
+                    <h4><?php echo $fee ?> 元</h4>
                 </div>
                 <div class="sum">
-                    <h3>每日總金額</h3>
-                    <h3 id="phpActualPrice"><?php echo $actualprice ?>元</h3>
+                    <h4>每日總金額</h4>
+                    <h4 id="phpActualPrice"><?php echo $actualprice ?> 元</h4>
                 </div>
-                <hr>
 
                 <div class="input-group input-group-lg mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">入住時間</span>
@@ -221,16 +221,18 @@
                         </select>
                     </div>
                     <div class="inpflex">
-                        <h3>入住&nbsp;</h3>
+                        <h4>入住&nbsp;</h4>
                         <div class="inpflexflex">
-                            <h3 id="precalc"></h3>
-                            <h3>&nbsp;個晚上</h3>
+                            <h4 id="precalc"></h4>
+                            <h4>&nbsp;日</h4>
                         </div>
                     </div>
 
+                    <hr>
+
                 <div class="sum">
-                    <h2>總金額</h2>
-                    <h3 id="pricePreview"></h3>
+                    <h3>總金額</h3>
+                    <h3 id="pricePreview">元</h3>
                 </div>
                 <br>
 
@@ -317,25 +319,26 @@
 
 function calcDays(){
     if (sm == em){
-        let val = ed - sd == 0 ? '0' : ed - sd;
+        // let val = ed - sd == 0 ? '0' : ed - sd;
+        let val = ed - sd + 1;
         $('#precalc').text(val);
 
         let price = Number($('#phpActualPrice').text().replace('元',''));
-        let pricePreview = price * (val + 1);
+        let pricePreview = price * val;
 
-        $('#pricePreview').text(pricePreview + "元");
+        $('#pricePreview').text(pricePreview + " 元");
         $('#submitPrice').val(pricePreview);
     }
     else {
         smLeft = 30 - sd;
         monthSpan = (em - sm - 1) * 30;
-        let val = (smLeft + monthSpan + ed)==0 ? '0' : smLeft + monthSpan + ed;
+        let val = (smLeft + monthSpan + ed + 1)==0 ? '0' : smLeft + monthSpan + ed + 1;
         $('#precalc').text(val);
 
         let price = Number($('#phpActualPrice').text().replace('元',''));
-        let pricePreview = price * (val + 1);
+        let pricePreview = price * val;
 
-        $('#pricePreview').text(pricePreview + "元");
+        $('#pricePreview').text(pricePreview + " 元");
         $('#submitPrice').val(pricePreview);
     }
 }
