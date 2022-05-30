@@ -31,7 +31,14 @@
 
         $hid = $_POST['hid'];
         $hname = $_POST['hname'];
-        $updateSql = "UPDATE house SET havailability = '0', hrenter = ".(int)$uid." WHERE house.hid = '$hid';";
+        $hsm = $_POST['sm'];
+        $hem = $_POST['em'];
+        $hsd = $_POST['sd'];
+        $hed = $_POST['ed'];
+
+
+        $updateSql = "UPDATE house SET havailability = '0', hrenter = $uid, hsm = $hsm, hem = $hem, hsd = $hsd, hed = $hed WHERE house.hid = '$hid';";
+
         mysqli_query($link, $updateSql);
 
         // 釋放結果物件佔用的記憶體空間

@@ -90,10 +90,6 @@ p{
     flex-shrink: 0;
 }
 
-.form-control{
-    /* max-width: 70%; */
-
-}
 
 .inpflexflex{
     display: flex;

@@ -66,12 +66,17 @@
                     $haddress = $row['haddress'];
                     $hownerid = $row['howner'];
                     $himglink = $row['himglink'];
+                    $hsm = $row['hsm'];
+                    $hem = $row['hem'];
+                    $hsd = $row['hsd'];
+                    $hed = $row['hed'];
                     ?>
 
                     <div class="listing-entry">
                     <img class="entry-image" src=<?php echo empty($himglink) ? "https://picsum.photos/300/200" : "$himglink" ?> alt="房屋照片">
                         <div class="entry-desc">
-                            <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
+                            <span><h3><?php echo $hname ?></h3> 
+                            <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?>&nbsp;&nbsp;&nbsp;<?php echo empty($hsm) ? "" : "$hsm 月 $hsd 日 — $hem 月 $hed 日"?></span>
                             <p><?php echo $hdesc ?></p>
                         </div>
                         <div class="entry-info">
@@ -114,8 +119,6 @@
                     $haddress = $row['haddress'];
                     $hownerid = $row['howner'];
                     $himglink = $row['himglink'];
-
-                    // $haddress = ($haddress == '' ? '台灣' : '');
                     ?>
 
                     <div class="listing-entry">
@@ -123,6 +126,7 @@
                         <div class="entry-desc">
                             <span><h3><?php echo $hname ?></h3> <img class="location" src="public/location.png" alt="location pin"><?php echo empty($haddress) ? '台灣' : $haddress ?></span>
                             <p><?php echo $hdesc ?></p>
+                            
                         </div>
                         <div class="entry-info">
                             <h3>$<?php echo $hprice ?>元／每晚</h3>

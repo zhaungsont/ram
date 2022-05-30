@@ -117,6 +117,7 @@
                     <h4 id="phpActualPrice"><?php echo $actualprice ?> 元</h4>
                 </div>
 
+                <form action="success.php" method="POST">
                 <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">入住時間</span>
                         <select class="form-select" name="sm" required>
@@ -237,7 +238,7 @@
                 <br>
 
                 <!-- <input type="text" class="form-control form-control-lg" name=""> -->
-                <form action="success.php" method="POST">
+                
                 <input type="hidden" name="hid" value=<?php echo $hid ?>>
                 <input type="hidden" name="hname" value=<?php echo $hname ?>>
                 <input type="hidden" name="price" id="submitPrice">
