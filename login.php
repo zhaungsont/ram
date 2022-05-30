@@ -43,7 +43,7 @@
             <br><br>
             <div class="d-grid gap-2 col-20 mx-auto">
                 <button type="submit" class="btn btn-dark btn-lg">登入</button>
-                <a href="register.php" class="btn btn-outline-dark btn-lg" role="button">註冊</a>
+                <!-- <a href="register.php" class="btn btn-outline-dark btn-lg" role="button">註冊</a> -->
             </div>
             
         </form>

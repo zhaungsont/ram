@@ -49,6 +49,7 @@
                 ?>
                 <div>
                     <a href="login.php" class="btn btn-outline-light btn-lg">登入</a>
+                    <a href="register.php" class="btn btn-outline-light btn-lg">註冊</a>
                 </div>
                 <?php
                 }

@@ -1,12 +1,12 @@
 <?php
     session_start();
 
-    if (isset($_SESSION['uid'])){
-        $uid = $_SESSION['uid'];
-    } else {
-        // 沒有登入或沒有點選下單就到此頁面
-        header('Location: login.php');
-    }
+    // if (isset($_SESSION['uid'])){
+    //     $uid = $_SESSION['uid'];
+    // } else {
+    //     // 沒有登入或沒有點選下單就到此頁面
+    //     header('Location: login.php');
+    // }
 
     $link = mysqli_connect(
         'localhost', // mysql 主機名稱
@@ -115,8 +115,12 @@
                                     <span class="card-text"><?php echo empty($hownerName) ? '匿名' : $hownerName ?></span>
                                 </div>
                                 <p class="card-text"><?php echo $truncDesc ?></p>
-                                <h2>$<?php echo $hprice ?> / 每晚</h2>
-                                
+                                <br>
+                                &nbsp; 
+                                <br>
+                                <br>
+                                <br>
+                                <h2 class="hprice">$<?php echo $hprice ?> / 每晚</h2>
                                 <form action="checkout.php" method="POST">
                                     <input type="hidden" name="hid" value=<?php echo $hid ?>>
                                     <input type="hidden" name="hname" value=<?php echo $hname ?>>

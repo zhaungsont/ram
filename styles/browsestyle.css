@@ -24,7 +24,20 @@
     width: 1em;
 }
 
+.hprice{
+    position: absolute;
+    right: 0.5em;
+    bottom: 2em;
+}
+
+.card-body{
+    position: relative;
+}
+
 .orderbtn{
     display: flex;
     justify-content: end;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
 }
