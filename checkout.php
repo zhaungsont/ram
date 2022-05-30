@@ -117,7 +117,7 @@
                     <h4 id="phpActualPrice"><?php echo $actualprice ?> 元</h4>
                 </div>
 
-                <div class="input-group input-group-lg mb-3">
+                <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">入住時間</span>
                         <select class="form-select" name="sm" required>
                             <option value="" selected disabled>入住月份</option>
@@ -169,7 +169,7 @@
                         </select>
                     </div>
 
-                    <div class="input-group input-group-lg mb-3">
+                    <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">退房時間</span>
                         <select class="form-select" name="em" required>
                             <option value="" selected disabled>退房月份</option>
