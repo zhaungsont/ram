@@ -1,0 +1,28 @@
+#edit-section{
+    margin: 25vh 15%;
+
+}
+
+#edit-section h1{
+    margin-bottom: 1em;
+}
+
+.form {
+    /* width: 30%; */
+    display: flex;
+    align-items: center;
+}
+
+.form form {
+    width: 50%;
+    margin-right: 3em;
+}
+
+h3{
+    margin-top: 0.5em;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: right;
+}

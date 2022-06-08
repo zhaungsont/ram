@@ -21,6 +21,20 @@
         exit();
     } 
 
+    $personalInfo = "SELECT * FROM user WHERE uid = $uid;";
+    $result = mysqli_query($link, $personalInfo);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0){
+        while ($row = mysqli_fetch_assoc($result)){
+            $account = $row['account'];
+            $username = $row['username'];
+            $_SESSION['upw'] = $row['password'];
+        }
+    } else {
+        echo "MySQL 帳號取得錯誤<br>";
+        exit();
+    }
+
 
 ?>
 
@@ -47,6 +61,26 @@
 <?php require('require/header.php'); ?>
     <img class="bgblur" src="https://images.pexels.com/photos/7932264/pexels-photo-7932264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="bunch of houses">
     <h1 class="listing-main-title">管理我的屋件</h1>
+    
+    <section id="myaccount">
+        <div class="titlebtn">
+            <h2 class="listing-title">個人資料</h2>
+            <form action="editpersonalinfo.php" method="POST">
+                <input type="hidden" name="uid" value=<?php echo $uid ?>>
+                <button type="submit" class="btn btn-outline-dark">編輯個人資料</button>
+            </form>
+            <!-- <a href="editpersonalinfo.php" class="btn btn-outline-dark">編輯個人資料</a> -->
+        </div>
+        <hr>
+            <div class="account-entry">
+                <h3>帳號：<?php echo $account ?></h3>
+                <h3>密碼：*********</h3>
+            </div>
+            <div class="account-entry">
+                <h3>使用者名稱：<?php echo $username?></h3>
+            </div>
+    </section>
+
     <section id="myorders">
         <div class="titlebtn">
             <h2 class="listing-title">我的訂單</h2>
@@ -101,6 +135,7 @@
         ?>
 
     </section>
+    
     <section id="mylistings">
         <div class="titlebtn">
             <h2 class="listing-title">我刊登的屋件</h2>

@@ -58,7 +58,7 @@
             <button type="submit" class="btn btn-dark btn-lg">註冊</button>
         </div>
     </form>
-    <strong style="color: red; ">切勿輸入真實帳號資訊！本網站為練習用網站，沒有資安防護措施。</strong>
+    <strong style="color: red; ">切勿輸入真實帳號資訊！本網站為練習用網站，沒有資安防護措施。你輸入的資訊「會」上傳到雲端伺服器上！</strong>
     </div>
 </div>
 </body>
