@@ -24,21 +24,7 @@
         echo "MySQL 連線錯誤<br>";
         exit();
     } else {
-        // 有登入才給 username ，沒登入沒關係，就省略
-        // if (isset($_SESSION['uid'])){
-        //     $uid = $_SESSION['uid'];
-        //     $sql = "SELECT *  FROM user WHERE uid = '$uid';";
-        //     $result = mysqli_query($link, $sql);
-        //     $resultCheck = mysqli_num_rows($result);
 
-        //     if ($resultCheck > 0){
-        //         // 資料庫內有這個帳號
-        //         while ($row = mysqli_fetch_assoc($result)){
-        //             $username =  $row['username'];
-        //         }
-        //     } 
-            
-        // }
 
         // 載入使用者欲下單的房型（沒辦法直接用表單傳，PHP POST 有資料乘載上限）
         $hid = $_POST['hid'];

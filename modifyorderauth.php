@@ -30,14 +30,12 @@
             exit();
         }
         $price = $_POST['price'];
-
         $hid = $_POST['hid'];
         $hname = $_POST['hname'];
         $hsm = $_POST['sm'];
         $hem = $_POST['em'];
         $hsd = $_POST['sd'];
         $hed = $_POST['ed'];
-
 
         $updateSql = "UPDATE house SET havailability = '0', hrenter = $uid, hsm = $hsm, hem = $hem, hsd = $hsd, hed = $hed WHERE house.hid = '$hid';";
 
@@ -48,23 +46,8 @@
         // 斷開SQL連接
         mysqli_close($link);
 
-        $message = "恭喜！訂房成功🎉 您現在可以在個人頁面檢視您的屋件。";
+        $message = "訂單修改成功。";
         echo "<script type='text/javascript'>alert('$message');</script>";
         header( "refresh:0;url=listings.php" );
-    }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 共用CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    <title>Success</title>
-</head>
-<body>
-    
-</body>
-</html>
+    }
