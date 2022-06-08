@@ -124,6 +124,13 @@
                                     <button type="submit" class="btn btn-outline-danger">取消訂房</button>
                                 </div>
                             </form>
+                            <form action="modifyorder.php" method="POST">
+                                <input type="hidden" name="uid" value=<?php echo $uid ?>>
+                                <input type="hidden" name="hid" value=<?php echo $hid ?>>
+                                <div class="d-grid gap-2 col-20 mx-auto">
+                                    <button type="submit" class="btn btn-outline-dark">更改訂單</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
@@ -175,9 +182,23 @@
                                 <?php
                                     if ($havailability == '0'){
                                         echo "<button type='submit' class='btn btn-outline-danger' disabled>取消刊登</button>";
-                                        echo "<i>屋件出租中</i>";
                                     } else {
                                         echo "<button type='submit' class='btn btn-outline-danger'>取消刊登</button>";
+                                    }
+                                ?>
+                                </div>
+                            </form>
+                            <form action="modifylisting.php" method="POST">
+                                <input type="hidden" name="uid" value=<?php echo $uid ?>>
+                                <input type="hidden" name="hid" value=<?php echo $hid ?>>
+                                <div class="d-grid gap-2 col-20 mx-auto">
+
+                                <?php
+                                    if ($havailability == '0'){
+                                        echo "<button type='submit' class='btn btn-outline-dark' disabled>更改屋訊</button>";
+                                        echo "<i>屋件出租中</i>";
+                                    } else {
+                                        echo "<button type='submit' class='btn btn-outline-dark'>更改屋訊</button>";
                                     }
                                 ?>
                                 </div>

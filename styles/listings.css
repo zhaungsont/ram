@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-.titlebtn a{
+.titlebtn a, .titlebtn button{
     margin-right: 1em;
 }
 
@@ -104,4 +104,8 @@
 
 .nolistings{
     margin: 0.5em;
+}
+
+form{
+    margin-bottom: 0.5em;
 }
