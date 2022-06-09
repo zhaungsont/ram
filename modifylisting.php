@@ -58,7 +58,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles/createlistingstyle.css">
-    <title>刊登在租隊友上</title>
+    <title>更新您的屋件</title>
     <link rel="icon" type="image/x-icon" href="public/logo.ico">
 
 </head>
@@ -70,7 +70,7 @@
 
     <div class="clleft">
         <form action="modifylistingnauth.php" method="POST">
-            <h1>修改您刊登的資訊</h1>
+            <h1>修改您的屋件</h1>
             <br>
             <h3>屋件名稱</h3>
             <input class="form-control form-control-lg" type="text" name="hname" value="<?php echo $hname ?>" required>

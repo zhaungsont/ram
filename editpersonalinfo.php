@@ -48,7 +48,8 @@ $personalInfo = "SELECT * FROM user WHERE uid = $uid;";
     <link rel="stylesheet" href="styles/common.css">
     
     <link rel="stylesheet" href="styles/editperson.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="public/logo.ico">
+    <title>更改個資</title>
 </head>
 <body>
 <?php require('require/header.php'); ?>
