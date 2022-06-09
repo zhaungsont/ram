@@ -59,7 +59,105 @@
 
 </head>
 <body>
+<!-- <div class="input-group">
+  <select class="custom-select" name=price_range id="inputGroupSelect04" aria-label="Example select with button addon">
+    <option selected>Choose...</option>
+    <option value="NT$500以下">NT$500以下</option>
+    <option value="NT$500 - 1000">NT$500 - 1000</option>
+    <option value="NT$1000 - 2000">NT$1000 - 2000</option>
+    <option value="NT$2000 - 3000">NT$2000 - 3000</option>
+    <option value="NT$3000 - 4000">NT$3000 - 4000</option>
+    <option value="NT$4000 - 5000">NT$4000 - 5000</option>
+    <option value="NT$5000以上">NT$5000以上</option>
+  </select>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
+  </div>
+</div>  -->
+
+
+
+
+
+
 <?php require('require/header.php'); ?>
+
+<form action=price_range>
+    <fieldset>
+        <legend>Select your price range:</legend>
+
+        <div>
+        <input type="radio" id="500under" name="price" value="500under"
+                checked>
+        <label for="huey">NT$500以下</label>
+        </div>
+
+        <div>
+        <input type="radio" id="500-1000" name="price" value="500-1000">
+        <label for="dewey">NT$500 - 1000</label>
+        </div>
+
+        <div>
+        <input type="radio" id="1000-2000" name="price" value="1000-2000">
+        <label for="louie">NT$1000 - 2000</label>
+        </div>
+
+        <div>
+        <input type="radio" id="2000-3000" name="price" value="2000-3000">
+        <label for="louie">NT$2000 - 3000</label>
+        </div>
+
+        <div>
+        <input type="radio" id="3000-4000" name="price" value="3000-4000">
+        <label for="louie">NT$3000 - 4000</label>
+        </div>
+
+        <div>
+        <input type="radio" id="5000up" name="price" value="5000up">
+        <label for="louie">NT$5000以上</label>
+        </div>
+    </fieldset>
+</form>
+
+<?php
+
+if (isset($_GET['price_range'])){
+    $price=$_GET['price'];
+    switch($price){
+        case 'NT$500以下':
+            $price_sql="SELECT hprice FROM house WHERE hprice <='500'";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+
+        case 'NT$500 - 1000':
+            $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '500' AND '1000';";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+
+
+        case 'NT$1000 - 2000':
+            $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '1000' AND '2000'";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+    
+        case 'NT$2000 - 3000':
+            $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '2000' AND '3000'";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+
+
+        case 'NT$3000 - 4000':
+            $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '3000' AND '4000'";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+    
+        case 'NT$4000 - 5000':
+            $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '4000' AND '5000'";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+    
+        case 'NT$5000以上':
+            $price_sql="SELECT hprice FROM house WHERE hprice >='5000'";
+            $result=mysqli_query($link,$price_sql); //執行sql指令
+
+    }
+}
+
+?>
 
 <section id="browse-section">
 
