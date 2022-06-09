@@ -17,43 +17,43 @@
 ?>
 
 <section id="header">
-        <div class="flex-wrap">
-            <div class="fleft">
-                <a href="home.php"><img class="logo" src="public/home.png" alt="go home"></a>
-                <span><a href="home.php">租隊友 Rent-A-Mate</a></span>
-            </div>
-
-            <div class="fright">
-                <?php
-                if (isset($_SESSION['uid'])){
-                ?>
-
-                <div class="listing">
-                    <a href="createlisting.php"><img class="logo" src="public/upload.png" alt="upload new listing"></a>
-                    <span><a href="createlisting.php">刊登物件</a></span> 
-                </div>
-
-                <div class="user">
-                    <a href="listings.php"><img  class="logo" src="public/user.png" alt="user profile photo"></a>
-                    <span><a href="listings.php"><?php echo $username ?></a></span>
-                </div>
-
-                <form action="logout.php" method="POST">
-                    <div class="logout">
-                    <button type="submit" class="btn btn-outline-light btn-lg">登出</button>
-                    </div>
-                </form>
-
-                <?php
-                } else {
-                ?>
-                <div>
-                    <a href="login.php" class="btn btn-outline-light btn-lg">登入</a>
-                    <a href="register.php" class="btn btn-outline-light btn-lg">註冊</a>
-                </div>
-                <?php
-                }
-                ?>
-            </div>
+    <div class="flex-wrap">
+        <div class="fleft">
+            <a href="home.php"><img class="logo" src="public/home.png" alt="go home"></a>
+            <span><a href="home.php">租隊友 Rent-A-Mate</a></span>
         </div>
-    </section>
+
+        <div class="fright">
+            <?php
+            if (isset($_SESSION['uid'])){
+            ?>
+
+            <div class="listing">
+                <a href="createlisting.php"><img class="logo" src="public/upload.png" alt="upload new listing"></a>
+                <span><a href="createlisting.php">刊登物件</a></span> 
+            </div>
+
+            <div class="user">
+                <a href="listings.php"><img  class="logo" src="public/user.png" alt="user profile photo"></a>
+                <span><a href="listings.php"><?php echo $username ?></a></span>
+            </div>
+
+            <form action="logout.php" method="POST">
+                <div class="logout">
+                <button type="submit" class="btn btn-outline-light btn-lg">登出</button>
+                </div>
+            </form>
+
+            <?php
+            } else {
+            ?>
+            <div>
+                <a href="login.php" class="btn btn-outline-light btn-lg">登入</a>
+                <a href="register.php" class="btn btn-outline-light btn-lg">註冊</a>
+            </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+</section>
