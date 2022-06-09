@@ -252,10 +252,12 @@
 
         if (sm != undefined && em != undefined && sm > em){
             alert('入住月份不得晚於退房月份！');
+            clearAll();
         }
 
         if (sd != undefined && ed != undefined && sm == em && sd > ed){
             alert('入住日期不得晚於退房日期！');
+            clearAll();
         }
 
         if (sm != undefined && em != undefined && sd != undefined && ed != undefined){
@@ -266,9 +268,11 @@
         em = Number(this.value); 
         if (sm != undefined && em != undefined && sm > em){
             alert('入住月份不得晚於退房月份！');
+            clearAll();
         }
         if (sd != undefined && ed != undefined && sm == em && sd > ed){
             alert('入住日期不得晚於退房日期！');
+            clearAll();
         }
 
         if (sm != undefined && em != undefined && sd != undefined && ed != undefined){
@@ -282,6 +286,7 @@
             if (ed != undefined && sm == em){
                 if (sd > ed){
                     alert('入住日期不得晚於退房日期！');
+                    clearAll();
                 }
             }
         }
@@ -297,6 +302,7 @@
             if (sd != undefined && sm == em){
                 if (sd > ed){
                     alert('入住日期不得晚於退房日期！');
+                    clearAll();
                 }
             }
         }
@@ -330,5 +336,13 @@ function calcDays(){
         $('#pricePreview').text(pricePreview + " 元");
         $('#submitPrice').val(pricePreview);
     }
+}
+
+function clearAll(){
+    $('select').val('').change();
+    sm = undefined;
+    em = undefined;
+    sd = undefined;
+    ed = undefined;
 }
 </script>
