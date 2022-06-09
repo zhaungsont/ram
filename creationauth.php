@@ -19,7 +19,7 @@ if (!isset($_SESSION['uid'])){
     if (!is_numeric($hprice)){
         $message = "售價欄位請輸入純數字內容！";
         echo "<script type='text/javascript'>alert('$message');</script>";
-        header( "refresh:0;url=createlisting.php" );
+        header( "refresh:0;url=createlistings.php" );
     }
 
 $link = mysqli_connect(
