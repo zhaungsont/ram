@@ -89,32 +89,36 @@
         <div>
         <input type="radio" id="500under" name="price" value="500under"
                 checked>
-        <label for="huey">NT$500以下</label>
+        <label for="500under">NT$500以下</label>
         </div>
 
         <div>
         <input type="radio" id="500-1000" name="price" value="500-1000">
-        <label for="dewey">NT$500 - 1000</label>
+        <label for="500-1000">NT$500 - 1000</label>
         </div>
 
         <div>
         <input type="radio" id="1000-2000" name="price" value="1000-2000">
-        <label for="louie">NT$1000 - 2000</label>
+        <label for="1000-2000">NT$1000 - 2000</label>
         </div>
 
         <div>
         <input type="radio" id="2000-3000" name="price" value="2000-3000">
-        <label for="louie">NT$2000 - 3000</label>
+        <label for="2000-3000">NT$2000 - 3000</label>
         </div>
 
         <div>
         <input type="radio" id="3000-4000" name="price" value="3000-4000">
-        <label for="louie">NT$3000 - 4000</label>
+        <label for="3000-4000">NT$3000 - 4000</label>
         </div>
 
         <div>
         <input type="radio" id="5000up" name="price" value="5000up">
-        <label for="louie">NT$5000以上</label>
+        <label for="5000up">NT$5000以上</label>
+        </div>
+
+        <div>
+        <button type="submit">Submit</button>
         </div>
     </fieldset>
 </form>
@@ -124,43 +128,42 @@
 if (isset($_GET['price_range'])){
     $price=$_GET['price'];
     switch($price){
-        case 'NT$500以下':
+        case '500under':
             $price_sql="SELECT hprice FROM house WHERE hprice <='500';";
             mysqli_query($link,$price_sql); //執行sql指令
 
-        case 'NT$500 - 1000':
+        case '500 - 1000':
             $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '500' AND '1000';";
             mysqli_query($link,$price_sql); //執行sql指令
             header("Location: browse.php");
             break;
 
-
-        case 'NT$1000 - 2000':
+        case '1000 - 2000':
             $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '1000' AND '2000';";
             mysqli_query($link,$price_sql); //執行sql指令
             header("Location: browse.php");
             break;
     
-        case 'NT$2000 - 3000':
+        case '2000 - 3000':
             $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '2000' AND '3000';";
             mysqli_query($link,$price_sql); //執行sql指令
             header("Location: browse.php");
             break;
 
 
-        case 'NT$3000 - 4000':
+        case '3000 - 4000':
             $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '3000' AND '4000'";
             mysqli_query($link,$price_sql); //執行sql指令
             header("Location: browse.php");
             break;
     
-        case 'NT$4000 - 5000':
+        case '4000 - 5000':
             $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '4000' AND '5000'";
             mysqli_query($link,$price_sql); //執行sql指令
             header("Location: browse.php");
             break;
     
-        case 'NT$5000以上':
+        case '5000up':
             $price_sql="SELECT hprice FROM house WHERE hprice >='5000'";
             $result=mysqli_query($link,$price_sql); //執行sql指令
             header("Location: browse.php");
