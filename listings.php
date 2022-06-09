@@ -73,11 +73,11 @@
         </div>
         <hr>
             <div class="account-entry">
-                <h3>帳號：<?php echo $account ?></h3>
-                <h3>密碼：*********</h3>
+                <h5>帳號：<?php echo $account ?></h5>
+                <h5>密碼：*********</h5>
             </div>
             <div class="account-entry">
-                <h3>使用者名稱：<?php echo $username?></h3>
+                <h5>使用者名稱：<?php echo $username?></h5>
             </div>
     </section>
 

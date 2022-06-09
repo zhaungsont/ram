@@ -52,7 +52,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.account-entry h3{
+.account-entry h3, .account-entry h5{
     margin: 0.5em;
 }
 

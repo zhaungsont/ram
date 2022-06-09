@@ -30,7 +30,6 @@
             exit();
         }
         $price = $_POST['price'];
-
         $hid = $_POST['hid'];
         $hname = $_POST['hname'];
         $hsm = $_POST['sm'];

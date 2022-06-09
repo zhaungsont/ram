@@ -2,7 +2,7 @@
     margin: 10em 15% 0 15%;
 }
 
-form {
+.clleft form {
     max-width: 40em;
     min-width: 80%;
 }
@@ -39,4 +39,9 @@ img.climg{
 
 .btn{
     line-height: 2em;
+}
+
+section{
+    padding-bottom: 5em;
+
 }

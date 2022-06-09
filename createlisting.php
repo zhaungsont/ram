@@ -4,7 +4,9 @@
 
     if (!isset($_SESSION['uid'])){
         header("Location: login.php");
+        exit();
     }
+
     $link = mysqli_connect(
         'localhost', // mysql 主機名稱
         'root', // 使用者名稱

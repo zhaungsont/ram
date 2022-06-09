@@ -229,7 +229,8 @@
                 <input type="hidden" name="hname" value=<?php echo $hname ?>>
                 <input type="hidden" name="price" id="submitPrice">
                 <div class="d-grid gap-2 col-20 mx-auto">
-                    <button type="submit" class="btn btn-dark btn-lg orderbtn">訂房</button>
+                    <button type="submit" class="btn btn-danger btn-lg orderbtn">更新資訊</button>
+                    <a href="listings.php" class="btn btn-dark">取消修改</a>
                 </div>
                 </form>
             </div>
