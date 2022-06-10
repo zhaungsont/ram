@@ -41,3 +41,23 @@
     bottom: 1em;
     right: 1em;
 }
+
+.container_parents{
+    display: flex;
+    align-items: center;
+    margin: 10%;
+}
+
+.container_left{
+    flex:1;
+}
+
+.container_mid{
+  
+    flex:4;
+
+}
+
+.container_right{
+    flex:1;
+}

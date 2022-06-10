@@ -66,7 +66,8 @@
 
 
 
-    <div class="container">
+    <div class="container_parents">
+    <div class="container_left">
 
     <form action="browse.php">
         <fieldset>
@@ -113,7 +114,10 @@
             </div>
         </fieldset>
     </form>
+    </div>
 
+
+    <div class="container_mid">
         <div class="row row-cols-1 row-cols-md-4 g-4">
         <?php
         // 載入所有房型
@@ -250,6 +254,11 @@
         ?>
         
         </div>
+    </div>
+
+    <div class='container_right'>
+    </div>
+    
     </div>
 </section>
     
