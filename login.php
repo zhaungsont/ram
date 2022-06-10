@@ -30,26 +30,24 @@
 </head>
 <body>
 <?php require('require/header.php'); ?>
-<div class="loginwrapper">
-    <img class="lwrap" src="public/ram-cover2.png" alt="室內裝潢">
-    <div class="rwrap">
-        <h1>登入美好。</h1>
-        <form action="loginauth.php" method="POST">
-            <h3>帳號</h3>
-            <input class="form-control form-control-lg" type="text" name="account" required>
-            <h3>密碼</h3>
-            <input class="form-control form-control-lg" type="password" name="password" required>
+    <div class="loginwrapper">
+        <img class="lwrap" src="public/ram-cover2.png" alt="室內裝潢">
+        <div class="rwrap">
+            <h1>登入美好。</h1>
+            <form action="loginauth.php" method="POST">
+                <h3>帳號</h3>
+                <input class="form-control form-control-lg" type="text" name="account" required>
+                <h3>密碼</h3>
+                <input class="form-control form-control-lg" type="password" name="password" required>
 
-            <br><br>
-            <div class="d-grid gap-2 col-20 mx-auto">
-                <button type="submit" class="btn btn-dark btn-lg">登入</button>
-                <!-- <a href="register.php" class="btn btn-outline-dark btn-lg" role="button">註冊</a> -->
-            </div>
-            
-        </form>
+                <br><br>
+                <div class="d-grid gap-2 col-20 mx-auto">
+                    <button type="submit" class="btn btn-dark btn-lg">登入</button>
+                </div>
+                
+            </form>
+        </div>
     </div>
-</div>
-
 </body>
 
 </html>

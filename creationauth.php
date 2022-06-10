@@ -49,5 +49,4 @@ if (!$link) {
 // 斷開SQL連線
 mysqli_close($link);
 // You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Cheeseburger', 'It's a beeg ass yoshi', '48763', '1')' at line 2
-
 ?>

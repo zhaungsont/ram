@@ -21,7 +21,7 @@
     if (!is_numeric($hprice)){
         $message = "售價欄位請輸入純數字內容！";
         echo "<script type='text/javascript'>alert('$message');</script>";
-        header( "refresh:0;url=listing.php" );
+        header( "refresh:0;url=listings.php" );
     }
     $link = mysqli_connect(
         'localhost', // mysql 主機名稱

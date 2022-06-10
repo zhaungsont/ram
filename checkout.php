@@ -1,10 +1,6 @@
 <?php
     session_start();
 
-    // 懶得一直做登入的話就把這個放出來
-    // $_SESSION['uid'] = 'gg';
-    // $_POST['hchoice'] = '124';
-
     if (isset($_SESSION['uid']) && (isset($_POST['hid']))){
         $user = $_SESSION['uid'];
     } else {
@@ -24,9 +20,6 @@
         echo "MySQL 連線錯誤<br>";
         exit();
     } else {
-
-
-        // 載入使用者欲下單的房型（沒辦法直接用表單傳，PHP POST 有資料乘載上限）
         $hid = $_POST['hid'];
         $houseTable = "SELECT * FROM house WHERE hid = '$hid';";
         $result = mysqli_query($link, $houseTable);
@@ -216,17 +209,12 @@
                             <h4>&nbsp;日</h4>
                         </div>
                     </div>
-
                     <hr>
-
                 <div class="sum">
                     <h3>總金額</h3>
                     <h3 id="pricePreview">元</h3>
                 </div>
-                <br>
-
-                <!-- <input type="text" class="form-control form-control-lg" name=""> -->
-                
+                <br>                
                 <input type="hidden" name="hid" value=<?php echo $hid ?>>
                 <input type="hidden" name="hname" value=<?php echo $hname ?>>
                 <input type="hidden" name="price" id="submitPrice">
