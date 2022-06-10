@@ -184,6 +184,54 @@ if (isset($_GET['price_range'])){
 
         $result = mysqli_query($link, $houseTable);
         $resultCheck = mysqli_num_rows($result);
+
+        if (isset($_GET['price_range'])){
+            $price=$_GET['price'];
+            switch($price){
+                case '500under':
+                    $price_sql="SELECT hprice FROM house WHERE hprice <='500';";
+                    mysqli_query($link,$price_sql); //執行sql指令
+        
+                case '500-1000':
+                    $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '500' AND '1000';";
+                    mysqli_query($link,$price_sql); //執行sql指令
+                    header("Location: browse.php");
+                    break;
+        
+                case '1000-2000':
+                    $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '1000' AND '2000';";
+                    mysqli_query($link,$price_sql); //執行sql指令
+                    header("Location: browse.php");
+                    break;
+            
+                case '2000-3000':
+                    $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '2000' AND '3000';";
+                    mysqli_query($link,$price_sql); //執行sql指令
+                    header("Location: browse.php");
+                    break;
+        
+        
+                case '3000-4000':
+                    $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '3000' AND '4000'";
+                    mysqli_query($link,$price_sql); //執行sql指令
+                    header("Location: browse.php");
+                    break;
+            
+                case '4000-5000':
+                    $price_sql="SELECT hprice FROM house WHERE hprice BETWEEN '4000' AND '5000'";
+                    mysqli_query($link,$price_sql); //執行sql指令
+                    header("Location: browse.php");
+                    break;
+            
+                case '5000up':
+                    $price_sql="SELECT hprice FROM house WHERE hprice >='5000'";
+                    $result=mysqli_query($link,$price_sql); //執行sql指令
+                    header("Location: browse.php");
+                    break;
+        
+            }
+        }else{
+
         if ($resultCheck > 0){
             // 資料庫內有這個帳號
             while ($row = mysqli_fetch_assoc($result)){
@@ -255,6 +303,7 @@ if (isset($_GET['price_range'])){
             // 都沒房子ㄌ，尷尬
             echo "沒⋯⋯房⋯⋯可⋯⋯看⋯⋯";
         }
+    }
         // 釋放結果物件佔用的記憶體空間
         mysqli_free_result($result); 
         // 斷開SQL連接
