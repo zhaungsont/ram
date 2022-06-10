@@ -82,7 +82,7 @@
 
 <?php require('require/header.php'); ?>
 
-<form action=price_range>
+<form action="browse.php">
     <fieldset>
         <legend>Select your price range:</legend>
 
