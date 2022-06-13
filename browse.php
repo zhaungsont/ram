@@ -118,6 +118,13 @@
             </div>
         </fieldset>
     </form>
+        <div class="promotion">
+            <h4>深入了解租隊友</h4>
+            <ul>
+                <li><a href="https://github.com/zhaungsont/ram"><img src="public/github.png" alt="GitHub Logo"> 參訪 GitHub 頁面</a></li>
+                <li><a href="https://docs.google.com/presentation/d/1e0ffrRQENIpJt2ZW6IAH-BKGnpZ3mQmffFPoZhEqSm8/edit?usp=sharing"><img src="public/file.png" alt="document"> 閱讀本專案企劃書</a></li>
+            </ul>
+        </div>
     </div>
 
 

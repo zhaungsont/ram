@@ -82,5 +82,6 @@
     <a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Smashicons - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/location-pin" title="location pin icons">Location pin icons created by Pixel perfect - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/report" title="report icons">Report icons created by Freepik - Flaticon</a>
 </footer>
 </html>

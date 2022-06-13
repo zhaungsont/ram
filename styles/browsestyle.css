@@ -61,6 +61,21 @@
     flex:0.5;
 }
 
+.promotion{
+    margin-top: 2rem;
+
+}
+
+.promotion a{
+    color: rgb(23, 23, 29);
+}
+
+.promotion img{
+    width: 1rem;
+    position: relative;
+    bottom: 1px;
+}
+
 @media (min-width: 1600px) {
     .container_parents{
         margin: 10%;
