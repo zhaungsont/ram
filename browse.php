@@ -19,6 +19,10 @@
         echo "MySQL 連線錯誤<br>";
         exit();
     } 
+
+    if (isset($_GET['price'])){
+        $priceRange = $_GET['price'];
+    }
     // else {
     //     // 有登入才給 username ，沒登入沒關係，就省略
     //     if (isset($_SESSION['uid'])){
@@ -74,42 +78,42 @@
             <legend>有預算考量嗎？</legend>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="500under" name="price" value="500under">
+            <input class="form-check-input" type="radio" id="500under" name="price" value="500under" <?php echo $priceRange=='500under' ? "checked" : "" ?>>
             <label class="form-check-label" for="500under">NT$500以下</label>
             </div>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="500-1000" name="price" value="500-1000">
+            <input class="form-check-input" type="radio" id="500-1000" name="price" value="500-1000" <?php echo $priceRange=='500-1000' ? "checked" : "" ?>>
             <label class="form-check-label" for="500-1000">NT$500 - 1000</label>
             </div>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="1000-2000" name="price" value="1000-2000">
+            <input class="form-check-input" type="radio" id="1000-2000" name="price" value="1000-2000" <?php echo $priceRange=='1000-2000' ? "checked" : "" ?>>
             <label class="form-check-label" for="1000-2000">NT$1000 - 2000</label>
             </div>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="2000-3000" name="price" value="2000-3000">
+            <input class="form-check-input" type="radio" id="2000-3000" name="price" value="2000-3000" <?php echo $priceRange=='2000-3000' ? "checked" : "" ?>>
             <label class="form-check-label" for="2000-3000">NT$2000 - 3000</label>
             </div>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="3000-4000" name="price" value="3000-4000">
+            <input class="form-check-input" type="radio" id="3000-4000" name="price" value="3000-4000" <?php echo $priceRange=='3000-4000' ? "checked" : "" ?>>
             <label class="form-check-label" for="3000-4000">NT$3000 - 4000</label>
             </div>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="4000-5000" name="price" value="4000-5000">
+            <input class="form-check-input" type="radio" id="4000-5000" name="price" value="4000-5000" <?php echo $priceRange=='4000-5000' ? "checked" : "" ?>>
             <label class="form-check-label" for="4000-5000">NT$4000 - 5000</label>
             </div>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="5000up" name="price" value="5000up">
+            <input class="form-check-input" type="radio" id="5000up" name="price" value="5000up" <?php echo $priceRange=='5000up' ? "checked" : "" ?>>
             <label class="form-check-label" for="5000up">NT$5000以上</label>
             </div>
         </br>
             <div>
-            <button type="submit" class="btn btn-outline-dark"> > </button>
+            <button type="submit" class="btn btn-outline-dark"> 尋找房型 > </button>
             </div>
         </fieldset>
     </form>
