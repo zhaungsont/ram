@@ -113,7 +113,8 @@
             </div>
         </br>
             <div>
-            <button type="submit" class="btn btn-outline-dark"> 尋找房型 > </button>
+                <a href="browse.php" class="btn btn-outline-dark">清除條件</a>
+                <button type="submit" class="btn btn-dark"> 尋找房型 > </button>
             </div>
         </fieldset>
     </form>
