@@ -1,18 +1,18 @@
 #createlisting {
-    margin: 10em 15% 0 15%;
+    margin: 10rem 15% 0 15%;
 }
 
 form {
-    max-width: 40em;
+    max-width: 40rem;
     min-width: 80%;
 }
 
 form h1{
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 form h3{
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .clflex{
@@ -24,7 +24,7 @@ form h3{
 .clleft{
     /* width: 50%; */
     flex-grow: 2;
-    margin-right: 2em;
+    margin-right: 2rem;
 }
 
 img.climg{
@@ -38,5 +38,5 @@ img.climg{
 }
 
 .btn{
-    line-height: 2em;
+    line-height: 2rem;
 }

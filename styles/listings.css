@@ -8,15 +8,15 @@
 }
 
 .listing-main-title{
-    margin: 3em 15% 2em 15%;
-    font-size: 3em;
+    margin: 3rem 15% 2rem 15%;
+    font-size: 3rem;
 }
 
 .listing-title{
     /* backdrop-filter: blur(10px);
     border-radius: 15px; */
 
-    padding: 0.5em 0.5em 0 0.5em;
+    padding: 0.5rem 0.5rem 0 0.5rem;
 
 }
 
@@ -27,23 +27,23 @@
 }
 
 .titlebtn a, .titlebtn button{
-    margin-right: 1em;
+    margin-right: 1rem;
 }
 
 #myaccount{
-    margin: 5em 15%;
+    margin: 5rem 15%;
 
     backdrop-filter: blur(10px);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.2);
 }
 
 #myorders{
-    margin: 5em 15%;
+    margin: 5rem 15%;
 
     backdrop-filter: blur(10px);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.2);
 }
@@ -53,25 +53,25 @@
     grid-template-columns: 1fr 1fr;
 }
 .account-entry h3{
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 #mylistings{
-    margin: 5em 15%;
+    margin: 5rem 15%;
 
     backdrop-filter: blur(10px);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.2);
 }
 
 .listing-entry{
     /* backdrop-filter: blur(10px);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 15px; */
 
     display: flex;
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 
 .entry-image{
@@ -82,14 +82,14 @@
 }
 
 .entry-desc{
-    margin-top: 1em;
-    margin-left: 1em;
+    margin-top: 1rem;
+    margin-left: 1rem;
     text-align: justify;
     flex-grow: 2;
 }
 
 .entry-info{
-    margin-left: 1em;
+    margin-left: 1rem;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -99,13 +99,13 @@
 
 
 .location{
-    width: 1em;
+    width: 1rem;
 }
 
 .nolistings{
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 form{
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }

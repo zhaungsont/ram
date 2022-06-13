@@ -1,5 +1,5 @@
 #browse-section{
-    margin-top: 5em;
+    margin-top: 5rem;
 }
 
 .bwrap{
@@ -9,7 +9,7 @@
 }
 
 .card{
-    margin: 1em;
+    margin: 1rem;
 }
 
 .address{
@@ -17,17 +17,17 @@
 }
 
 .location img{
-    width: 1em;
+    width: 1rem;
 }
 
 .owner img{
-    width: 1em;
+    width: 1rem;
 }
 
 .hprice{
     position: absolute;
-    right: 0.5em;
-    bottom: 2em;
+    right: 0.5rem;
+    bottom: 2rem;
 }
 
 .card-body{
@@ -38,13 +38,13 @@
     display: flex;
     justify-content: end;
     position: absolute;
-    bottom: 1em;
-    right: 1em;
+    bottom: 1rem;
+    right: 1rem;
 }
 
 .container_parents{
     display: flex;
-    margin: 100px;
+    /* margin: 100px; */
 }
 
 .container_left{
@@ -61,8 +61,8 @@
     flex:1;
 }
 
-/* @media (min-width: 1600px) {
+@media (min-width: 1600px) {
     .container_parents{
         margin: 10%;
     }
-} */
+}
