@@ -28,11 +28,11 @@ body{
 }
 
 #landing-zone h1{
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 .landing-wrapper{
-    margin: 3em 10%;
+    margin: 3rem 10%;
     /* width: 80%; */
     display: flex;
     justify-content: center;
@@ -41,13 +41,13 @@ body{
 
 .lw-left{
     /* width: 70%; */
-    margin-right: 2em;
+    margin-right: 2rem;
 }
 
 .lw-left p{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-align: justify;
-    margin: 1em auto;
+    margin: 1rem auto;
 }
 
 .lw-right{
@@ -60,7 +60,7 @@ img.lw-right {
 }
 
 footer{
-    margin-top: 7em;
+    margin-top: 7rem;
     text-align: center;
     color: rgb(158, 158, 158);
 }

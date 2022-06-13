@@ -4,7 +4,7 @@
 }
 
 #edit-section h1{
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .form {
@@ -15,11 +15,11 @@
 
 .form form {
     width: 50%;
-    margin-right: 3em;
+    margin-right: 3rem;
 }
 
 h3{
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
 }
 
 .form-buttons{

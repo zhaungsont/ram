@@ -6,7 +6,7 @@ body{
 
 
 /* #checkout-section{
-    margin: 10em 30%;
+    margin: 10rem 30%;
 
 }
 
@@ -21,12 +21,12 @@ body{
 }
 
 .form{
-    margin: 2em;
-    padding-bottom: 2em;
+    margin: 2rem;
+    padding-bottom: 2rem;
 }
 
 .form h1{
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .buttonflex{
@@ -35,11 +35,11 @@ body{
 } */
 
 #checkout-section{
-    margin: 10em 20%;
+    margin: 10rem 20%;
 }
 
 h1{
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 p{
@@ -50,11 +50,11 @@ p{
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 
 .lwrap{
-    margin: 0 2em 0 0;
+    margin: 0 2rem 0 0;
     width: 100%;
 }
 
@@ -62,15 +62,15 @@ p{
     width: 100%;
     margin: auto inherit;
     border-radius: 15px;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 
 .lwrap h2{
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .rwrap{
-    margin: auto 0 auto 2em;
+    margin: auto 0 auto 2rem;
     flex-grow: 2;
     max-width: 40%;
 }
@@ -98,6 +98,6 @@ p{
 }
 
 .orderbtn{
-    margin-top: 2em;
-    line-height: 2em;
+    margin-top: 2rem;
+    line-height: 2rem;
 }
