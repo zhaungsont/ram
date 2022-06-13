@@ -74,8 +74,7 @@
             <legend>有預算考量嗎？</legend>
 
             <div class="form-check">
-            <input class="form-check-input" type="radio" id="500under" name="price" value="500under"
-                    checked>
+            <input class="form-check-input" type="radio" id="500under" name="price" value="500under">
             <label class="form-check-label" for="500under">NT$500以下</label>
             </div>
 
@@ -118,7 +117,7 @@
 
 
     <div class="container_mid">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-4 g-0">
         <?php
         // 載入所有房型
         if (isset($_GET['price'])){

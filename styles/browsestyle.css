@@ -58,7 +58,7 @@
 }
 
 .container_right{
-    flex:1;
+    flex:0.5;
 }
 
 @media (min-width: 1600px) {
