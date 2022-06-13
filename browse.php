@@ -224,7 +224,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                <h2 class="hprice">$<?php echo $hprice ?> / 每晚</h2>
+                                <h3 class="hprice">$<?php echo $hprice ?> / 每晚</h3>
                                 <form action="checkout.php" method="POST">
                                     <input type="hidden" name="hid" value=<?php echo $hid ?>>
                                     <input type="hidden" name="hname" value=<?php echo $hname ?>>

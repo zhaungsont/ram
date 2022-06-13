@@ -32,7 +32,7 @@
     // }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  style="font-size: 10px">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
