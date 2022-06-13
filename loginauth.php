@@ -16,7 +16,6 @@
         echo "MySQL 連線錯誤<br>";
         exit();
     } else {
-        echo "MySQL ram 資料庫連接成功<br>";
         $sql = "SELECT *  FROM user WHERE account = '$inputAccount' AND password = '$inputPassword';";
         $result = mysqli_query($link, $sql);
         $resultCheck = mysqli_num_rows($result);
@@ -25,13 +24,8 @@
             // 資料庫內有這個帳號
 
             while ($row = mysqli_fetch_assoc($result)){
-                echo $row['uid']."<br>";
-                echo $row['username']."<br>";
-                echo $row['account']."<br>";
-                echo $row['pw']."<br>";
 
                 $_SESSION['uid'] = $row['uid'];
-                echo "session uid 現在是 ".$_SESSION['uid'];
                 // header( "refresh:2;url=browse.php" );
                 header('Location: browse.php');
             }
@@ -41,7 +35,7 @@
             // 所以將使用者重新導向回登入頁面
             // 有兩種方式：
             // 第一種：在網頁上寫
-            echo "<h1>登入失敗！ 5 秒後將你跳轉回登入畫面</h1>";
+            // echo "<h1>登入失敗！ 5 秒後將你跳轉回登入畫面</h1>";
 
             // 第二種：用跳出式提醒
             $message = "帳號或密碼錯誤！";
