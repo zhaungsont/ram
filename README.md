@@ -18,6 +18,8 @@
 
 **以下為本作品使用到的語言 / 工具：**
 * HTML / CSS
+* PHP
+* MySQL
 * JavaScript 、 jQuery
 * Bootstrap 5
 * Git
