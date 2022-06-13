@@ -44,7 +44,7 @@
 
 .container_parents{
     display: flex;
-    margin: 10%;
+    margin: 100px;
 }
 
 .container_left{
@@ -60,3 +60,9 @@
 .container_right{
     flex:1;
 }
+
+/* @media (min-width: 1600px) {
+    .container_parents{
+        margin: 10%;
+    }
+} */
