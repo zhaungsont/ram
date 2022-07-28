@@ -3,7 +3,7 @@
 ![網站首頁](home.png)
 ![瀏覽頁面](browse-logged.png)
 ![管理頁面](listings-sm-2.png)
-![更新訂單](update order.png)
+![更新訂單](update\ order.png)
 我們相信租房子應該是一件輕鬆簡單的事，因此我們打造了[租隊友 Rent-A-Mate](https://rent-a-mate.herokuapp.com/) 。<br>
 這是一個十分直覺的 C2C 線上房屋出租與下單平台，無論您是租客或者房東，都一定能在這裡擁有良好的體驗。
 
